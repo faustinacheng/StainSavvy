@@ -1,27 +1,16 @@
 $(document).ready(function () {
-    // $("form").submit(function (event) {
-    //     event.preventDefault();
-
-    //     let searchTerm = $("#search-term").val();
-    //     console.log("Search term: " + searchTerm);
-
-    //     if (searchTerm.trim() != "") {
-    //         console.log("working")
-    //         $.ajax({
-    //             type: "POST",  
-    //             url: "/search", 
-    //             contentType: 'application/json',
-    //             data: JSON.stringify({ term: searchTerm }),
-    //             success: function (data) {
-    //                 window.location.href = "/search_results/"+ encodeURIComponent(searchTerm);
-    //             },
-    //             error: function (error) {
-    //                 console.error("Error:", error);
-    //             }
-    //         });
-    //     } else {
-    //         $("#search-term").focus();
-    //     }
-    // });
-    // $("#search-term").focus();
+    fetch("../static/data.json")
+        .then((response) => response.json())
+        .then((data) => {
+            $(".navbar-nav").empty();
+            $.each(data.learn, function (i, item) {
+                $(".navbar-nav").append(
+                    `<div class="nav-item"><a href="learn/${item.id}">${item.stain}</a></div>`
+                );
+            });
+            $(".navbar-nav").append(
+                `<div class="nav-item"><a href="quiz">Quiz</a></div>`
+            );
+        })
+        .catch((error) => console.error("Error:", error));
 });

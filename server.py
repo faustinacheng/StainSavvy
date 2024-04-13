@@ -1,22 +1,36 @@
 from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify, json
+
 app = Flask(__name__)
 
-with open('static/data.json') as json_file:
+with open("static/data.json") as json_file:
     data = json.load(json_file)
 
 
 # ROUTES
-@app.route('/')
+@app.route("/")
 def welcome():
-   return render_template('home.html', data=data)   
+    return render_template("home.html", data=data)
 
-@app.route('/learn/<id>')
+
+@app.route("/learn/<id>")
 def learn_item(id):
     print(f"viewing  {format(id)}")
     item = data.get(id)
-    return render_template('learn.html', item=item)   
+    return render_template("learn.html", item=item)
+
+
+@app.route("/quiz")
+def quiz_welcome():
+    return render_template("quiz-welcome.html", data=data)
+
+
+@app.route("/quiz/<id>")
+def quiz_item(id):
+    print(f"viewing  {format(id)}")
+    quiz = data.get(id)
+    return render_template("quiz.html", quiz=quiz)
 
 
 # AJAX FUNCTIONS
@@ -25,7 +39,7 @@ def learn_item(id):
 #     global results
 #     newResults = []
 
-#     json_data = request.get_json()   
+#     json_data = request.get_json()
 #     search_term = json_data["term"]
 #     print(f"searched for {search_term}")
 
@@ -35,6 +49,6 @@ def learn_item(id):
 
 #     results = newResults
 #     return jsonify({'results': results})
-    
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+    var quizData = {{ quiz| tojson }};
+</script>
+<!-- <script src="{{ url_for('static', filename='home.js') }}"></script> -->
+
+<b id="welcome-div">Quiz</b>
+
+
+{% endblock %}
