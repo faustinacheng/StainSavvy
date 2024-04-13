@@ -1,112 +1,57 @@
 {
+  "learn": {
     "1": { 
         "id": "1", 
-        "name": "PlantShed", 
-        "image": "https://lh3.googleusercontent.com/p/AF1QipM7LHXqYBw8pJB9F81n4xjfkvjXVwylTO0gkwQT=s1360-w1360-h1020", 
-        "address": "723 Amsterdam Ave, New York, NY 10025", 
-        "store_information": "PlantShed has been a family-owned and operated business immersed in the floral and botanical community since the 1950s, originating on the Upper East Side and eventually establishing a presence throughout the city and country. We are a New York-based brand that strives to make our community stronger and has developed a deep understanding and appreciation for staying current with changing trends and technology, continuing to set the standard for quality and affordability. In doing so, we have since designed and opened six new, experiential brick-and-mortar retail stores in Manhattan that combine a boutique plant and flower shop with a quaint cafe experience. Our client base has expanded on both private and corporate platforms, as we now service clients across the United States and Canada.", 
-        "website": "https://www.plantshed.com/", 
-        "phone_number": "(212) 662-4400",
-        "rating" : 4.2,
-        "nearby_subway_lines" : ["1", "2", "3", "A", "B", "C"]
-    }, 
-    "2": { 
-        "id": "2", 
-        "name": "Foliage Garden", 
-        "image": "https://www.foliagegarden.com/images/about/01.jpg", 
-        "address": "120 W 28th St, New York, NY 10001", 
-        "store_information": "Welcome to Foliage Garden, a premiere wholesale and retail source for orchids and potted plants, located in Manhattan's famed flower market. Incorporated in 1981, we are the market's longest tenured plant store. Our distinctive orchids and plants are available for delivery in New York and the surrounding tri-state area upon request. Foliage Garden is the only source in the city to maintain its own greenhouses, enabling our Manhattan shop to receive fresh shipments daily, and to supply a savy New York market on demand. Clientele includes retail flower shops, event planners, interior designers, restaurants, hotels, magazines, corporate and private customers.", 
-        "website": "https://www.foliagegarden.com/index.php", 
-        "phone_number": "(212) 989-3089",
-        "rating" : 4.0,
-        "nearby_subway_lines" : ["1", "2", "3", "D", "F", "B", "M", "Q", "N", "R", "W"]
-    }, 
-    "3": { 
-        "id": "3", 
-        "name": "The Sill - Upper West Side", 
-        "image": "https://lh3.googleusercontent.com/p/AF1QipOaiheNwXKDp49SD38_36G1hz3luPe4adi3H3KA=s1360-w1360-h1020", 
-        "address": "448 Amsterdam Ave, New York, NY 10024", 
-        "store_information": "The Sill was founded on this simple premise—plants make us happier, healthier humans. I started The Sill in 2012 at the age of 26 in borrowed office space in a tiny walk-up in New York City’s Chinatown. The idea had sprouted years before (sorry, we love a good plant pun around here) when I found myself in my first adult apartment. Bleak is how you’d describe it. Homesick is how you’d describe me. My Mom, an immigrant who stayed connected to her Filipino roots through gardening, recommended I get some houseplants. Little did I know tapping into my family’s generational love of plants would grow into the small but mighty company that is The Sill.", 
-        "website": "https://www.thesill.com/?utm_source=gmb&utm_medium=upper-west-side&utm_campaign=website-url", 
-        "phone_number": "(646) 899-4016",
-        "rating" : 4.1,
-        "nearby_subway_lines" : ["1", "2", "3", "A", "B", "C"]
-    }, 
-    "4": { 
-        "id": "4", 
-        "name": "The Old Yew", 
-        "image": "https://lh3.googleusercontent.com/p/AF1QipNb5AMdJYwPrmTR6hl0OSUjXX1DNbN0uBUC7QXp=s1360-w1360-h1020", 
-        "address": "1 Horatio St, New York, NY 10014", 
-        "store_information": "From Alocasias to ZZ Plants, we've got the widest – and rarest – varieties of houseplants for miles. In addition to our signature Plant Bug Spray, we stock organic plant care products, elegant pots & planters, and perfect gifts for the plant lovers in your life. You might recognize us as NYC's Pop-Up Plant Shop or visited us at the High Line or on Mott Street. We're excited to have finally found a permanent home in the West Village and we can't wait to see you there.", 
-        "website": "https://theoldyew.com/", 
-        "phone_number": "(646) 370-1899",
-        "rating" : 4.5,
-        "nearby_subway_lines" : ["1", "2", "3", "A", "E", "L"]
-    }, 
-    "5": { 
-        "id": "5", 
-        "name": "Urban Garden Center", 
-        "image": "https://lh3.googleusercontent.com/p/AF1QipN_RiYGPlBDujwgLycswixddw91SzFqXKVWCoUh=s1360-w1360-h1020", 
-        "address": "1560 Park Ave, New York, NY 10029", 
-        "store_information": "Urban Garden Center prides itself on using environmentally responsible methods to running the garden center. We strive to keep locally grown and organic plants and garden supplies. Our 20,000 sq.ft. outdoor garden center is conveniently located on East 116th Street and Park Avenue under the metro north railroad tracks. We are only 1 block from the 6 train and 3 blocks from the 2/3 train.  There is parking available on site. Urban Garden Center provides services like Garden Design, Garden Maintenance and Garden Installation throughout the Metro New York area.  Check out our garden services division's website GRNRF pronounced 'gren-rüf'. We have many of our items available online.", 
-        "website": "https://www.urbangardennyc.com/", 
-        "phone_number": "(646) 389-4299",
-        "rating" : 4.2,
-        "nearby_subway_lines" : ["4", "5", "6"]
-    }, 
-    "6": { 
-        "id": "6", 
-        "name": "Living With Green", 
-        "image": "https://lh3.googleusercontent.com/p/AF1QipPEP9c-PmRaZS3j7aey5ZMQcJzYcxTgG7HkokVB=s1360-w1360-h1020", 
-        "address": "324 E 81st St, New York, NY 10028", 
-        "store_information": "INDOOR HOUSEPLANT SHOP — UES Small Business Owned and Operated by a Local Wife-Husband Duo. Hi-ya! We are Vanessa and Brian, a local UES wife-husband duo passionate about all things plants. We had a vision for a business for a while, and once COVID hit, we decided to put our hearts and time into something that meant the world to us. That's right, PLANTS!  We are both from New York City and have spent over a decade together figuring out this thing called life. Plants have brought us so much peace and responsibility, and we hope they can do the same for you! We hope to bring more joy and variety to our fellow NYC plant community with local delivery and a variety of products, services and resources to ensure any plant parent is thriving in their journey!", 
-        "website": "https://livingwithgreen.shop/", 
-        "phone_number": "(646) 559-2803",
-        "rating" : 4.9,
-        "nearby_subway_lines" : ["Q", "N", "R"]
-    }, 
-    "7": { 
-        "id": "7", 
-        "name": "Kinka", 
-        "image": "https://lh3.googleusercontent.com/p/AF1QipP3Uzh65CR0GTJ_ZCbDYxDeRLINWACJ1C7D3Ak5=s1360-w1360-h1020", 
-        "address": "63 E 7th St Store East, New York, NY 10003", 
-        "store_information": "(Kin - Ka) : In Japanese Tea Ceremony; some flowers are too bold, too pungent or out of season. These flowers cannot be displayed in the tea ceremony. These flowers are forbidden. These flowers are called “Kinka.”KINKA enhances our diverse cultures through art, food  and plants. Kinka aspires to build a bridge to connect while offering a  space to share. Kinka offers botanical programs year round, exhibits artwork, conducts workshops and celebrates the changing of seasons.", 
-        "website": "https://www.kinka.nyc/", 
-        "phone_number": "(646) 808-7192",
-        "rating" : 4.7,
-        "nearby_subway_lines" : ["L", "4", "5", "6"]
-    }, 
-    "8": { 
-        "id": "8", 
-        "name": "Plant Corner NYC", 
-        "image": "https://lh5.googleusercontent.com/p/AF1QipOfJ1YAnUI6Q4j72fAGy5zh-omlAd3VuCosN-Rk=w408-h544-k-no", 
-        "address": "183 Malcolm X Blvd, New York, NY 10026", 
-        "store_information": "Plant Corner is a woman-and-minority-owned small business specializing in rare plants. We make sure to always have a unique selection of both common and rare plants to fulfill whatever needs, wants, and budget bring you to our door! We strive to provide you with healthy, acclimated plantlife, all the supplies, and advice you could hope for right here in the shop and over our website. At Plant Corner, we believe that goodness begins at  the roots, and we embody that not only with our plants themselves, but also in how we support others. All of our merchandise is sourced from small, often women or minority owned businesses, so you can be secure in knowing exactly who and what your purchases are supporting. ", 
-        "website": "https://plantcornernyc.com/", 
-        "phone_number": "(917) 456-4616",
-        "rating" : 4.8,
-        "nearby_subway_lines" : ["2", "3"]
-    }, 
-    "9": { 
-        "id": "9", 
-        "name": "MyCityOasis", 
-        "image": "https://img1.wsimg.com/isteam/ip/24ad2fab-685f-421f-80e7-bf65bb9875c3/20230806_175849.jpg/:/rs=w:1968", 
-        "address": "214 E 85th St New, New York, NY 10028", 
-        "store_information": "Houseplants, Patio Plants, Rooted Flowers, Seeds, Gardening Accessories & Nature-Inspired Artisanal Gifts on the UES. Enjoy browsing through our full collection of plants, gardening supplies and artisanal gifts in the comfort of your own home. Purchases can also be made via our website.  Payments are contactless, secure and easy. Our website is available 24/7, and our shop at 214 E. 85th St. is open Monday - Friday 5:00pm - 7:00pm and Saturday - Sunday 11:00am - 6:00pm.  All pick-up orders for the day must be placed an hour before shop opening time.", 
-        "website": "https://mycityoasis.com/", 
-        "phone_number": "(212) 287-5930",
-        "rating" : 5.0,
-        "nearby_subway_lines" : ["N", "Q", "R"]
-    }, 
-    "10": { 
-        "id": "10", 
-        "name": "Plant Le Bacle Horticultural Design", 
-        "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=6R3w5mMoNxj_nlcPJKFDfw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=74.3617&pitch=0&thumbfov=100", 
-        "address": "33 E 60th St, New York, NY 10022", 
-        "store_information": "PLB Horticultural Design, is a highly skilled, local, interior plant company that has been serving New York City, and surrounding areas since 1973.  We have a long-standing reputation for providing professional and personal customer service at a reasonable price, which is why we have maintained a strong customer base for the past 40+ years. We are a well-established, full-service, interior plantscaping company that can accommodate virtually any design project, large or small. We maintain our own nursery to insure that our clients recieve the best possible plants on the market, as well as, attractive and modern containers. We look forward to working with you!", 
-        "website": "https://plantslebacle.com/", 
-        "phone_number": "(646) 391-9614",
-        "rating" : 5.0,
-        "nearby_subway_lines" : ["N", "R", "W", "4", "5", "6"]
+        "stain": "Grass", 
+        "image": "grass.jpg",
+        "content": {
+            "identify": "This is how to identify grass stains",
+            "removal": {
+                "1": {
+                    "step": "remove grass stain step 1",
+                    "removal-image": "image_url_step_1.jpg"
+                },
+                "2": {
+                    "step": "remove grass stain step 2",
+                    "removal-image": "image_url_step_2.jpg"
+                },
+                "3": {
+                    "step": "remove grass stain step 3",
+                    "removal-image": "image_url_step_3.jpg"
+                }
+            },
+            "extra": "extra information about grass stains"
+        }
     }
+  },
+  "quiz": {
+    "1": { 
+        "id": 1,
+        "question-type": "multiple-choice",
+        "question": "Here is the text for question 1",
+        "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
+        "answer": 2
+    },
+    "2": { 
+        "id": 2,
+        "question-type": "order-steps",
+        "question": "Here is the text for question 2",
+        "steps": ["step2", "step3", "step1"],
+        "answer": ["step1", "step2", "step3"]
+    },
+    "3":{
+        "id": 3,
+        "question-type": "drag-items",
+        "question": "Here is the text for question 3",
+        "items": ["item1", "item2", "item3", "item4", "item5"],
+        "answer": ["item2", "item4", "item5"]
+    },
+    "4":{
+        "id": 4,
+        "question-type": "select-item",
+        "question": "Here is the text for question 4",
+        "items": ["item1", "item2", "item3", "item4", "item5"],
+        "answer": "item4"
+    }
+  }
 }
