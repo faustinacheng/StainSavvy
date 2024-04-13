@@ -4,12 +4,47 @@
 <script src="{{url_for('static', filename='learn.js')}}"></script>
 
 <script>
-    var itemData = {{ item|tojson }};
-    console.log(item);
+    var itemData = {{ item| tojson }};
+    console.log(itemData);
+    var numItems = {{ num }};
 </script>
 
 <div id="item-info">
-    <!--populate here-->
+    <div class="p-3">
+        <h1>{{item["stain"]}} Stains</h1>
+    </div>
+    <div class="row">
+        <div class="col-6 p-5">
+            <img src='{{url_for("static", filename="images/" + item["image"])}}' class='img-fluid'
+                alt='{{item["stain"]}} Stain Image'>
+            <p>
+                {{item["content"]["identify"]}}
+            </p>
+        </div>
+        <div class="col-6 p-5">
+            <div id="removal-wrapper">
+                <h2>Removal:</h2>
+                <ol>
+                    {% for step in item["content"]["removal"].values() %}
+                    <li>{{step["step"]}}
+                        <img src='{{url_for("static", filename="images/" + step["removal-image"])}}' class='img-fluid'
+                            alt='{{item["stain"]}} Stain Removal Image'>
+                    </li>
+                    {% endfor %}
+                </ol>
+
+            </div>
+            <div>
+                <p>
+                    {{item["content"]["extra"]}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="p-3 d-flex justify-content-between">
+        <a href="#" id="back-button" role="button" class="btn btn-primary">&#8592;</a>
+        <a href="#" id="next-button" role="button" class="btn btn-primary">&#8594;</a>
+    </div>
 </div>
 
 

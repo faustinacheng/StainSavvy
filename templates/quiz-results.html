@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div>
+    <div class="p-3">
+        <h1>Quiz Results</h1>
+    </div>
+    <div class="p-5 text-center">
+        You got: <p class="font-weight-bold">10/10 Correct</p>
+        <BR><BR>
+        Great job!<BR>
+        You are now a stain master!
+
+    </div>
+    <div class="p-3 d-flex justify-content-between">
+        <a href="/quiz" id="back-button" role="button" class="btn btn-primary">Retake Quiz</a>
+        <a href="/" id="next-button" role="button" class="btn btn-primary">Back to Home</a>
+    </div>
+</div>
+
+
+{% endblock %}

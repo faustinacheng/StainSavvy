@@ -10,3 +10,11 @@
     text-decoration: underline;
     color: #0066cc;
 }
+
+.nav-item.active a {
+    font-weight: bold;
+}
+
+.nav-item {
+    margin-left: 10px;
+}

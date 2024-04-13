@@ -2,11 +2,36 @@
 
 {% block content %}
 <script>
-    var jsonData = {{ data|tojson }};
+    var jsonData = {{ data| tojson }};
 </script>
 <script src="{{ url_for('static', filename='home.js') }}"></script>
 
-<b id="welcome-div">Welcome to StainSavvy</b>
+<div>
+    <div class="row">
+        <div class="col-8 p-5">
+            <p class="h4">
+                StainSavvy: Learn how to identify and remove stains from fabric in your everyday life.
+            </p><BR><BR>
+            No more ruined clothes due to mishaps!<BR><BR>
+            This quick and easy-to-use guide will help you prevent permanent stains next time they happen
 
+        </div>
+        <div class="col-4 p-5">
+            Stains you will learn about:
+            <ul>
+                <li>Grass</li>
+                <li>Coffee</li>
+                <li>Blood</li>
+                <li>Wine</li>
+                <li>Ketchup</li>
+                <li>Marker</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="p-3 text-right">
+        <a href="/learn/1" role="button" class="btn btn-primary">Start Learning</a>
+    </div>
+</div>
 
 {% endblock %}

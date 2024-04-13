@@ -7,6 +7,9 @@ app = Flask(__name__)
 with open("static/data.json") as json_file:
     data = json.load(json_file)
 
+num_learn_items = len(data["learn"])
+num_quiz_items = len(data["quiz"])
+
 
 # ROUTES
 @app.route("/")
@@ -17,8 +20,8 @@ def welcome():
 @app.route("/learn/<id>")
 def learn_item(id):
     print(f"viewing  {format(id)}")
-    item = data.get(id)
-    return render_template("learn.html", item=item)
+    item = data["learn"].get(id)
+    return render_template("learn.html", item=item, num=num_learn_items)
 
 
 @app.route("/quiz")
@@ -29,8 +32,13 @@ def quiz_welcome():
 @app.route("/quiz/<id>")
 def quiz_item(id):
     print(f"viewing  {format(id)}")
-    quiz = data.get(id)
-    return render_template("quiz.html", quiz=quiz)
+    quiz = data["quiz"].get(id)
+    return render_template("quiz.html", quiz=quiz, num=num_quiz_items)
+
+
+@app.route("/quiz/results")
+def quiz_results():
+    return render_template("quiz-results.html")
 
 
 # AJAX FUNCTIONS

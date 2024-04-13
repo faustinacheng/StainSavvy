@@ -4,7 +4,24 @@
 
 <!-- <script src="{{ url_for('static', filename='home.js') }}"></script> -->
 
-<b id="welcome-div">Quiz</b>
+<div>
+    <div class="p-3">
+        <h1>Quiz</h1>
+    </div>
+    <div class="p-5 text-center">
+        Congrats! You have completed learning about stains.<BR><BR>
+
+        Now, take a quiz to test your understanding.
+        <div class="mt-3 text-center">
+            <a href="/quiz/1" role="button" class="btn btn-primary">Start Quiz</a>
+        </div>
+
+    </div>
+    <div class="p-3">
+        <!-- TODO: Link to last learning item -->
+        <a href="/learn/1" role="button" class="btn btn-primary">&#8592;</a>
+    </div>
+</div>
 
 
 {% endblock %}
