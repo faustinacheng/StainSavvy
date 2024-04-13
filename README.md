@@ -1,5 +1,8 @@
-StainSavvy
+# StainSavvy
 
-Faustina Cheng
-Phillip Le
-Claudia Cortell
+## Members:
+Faustina Cheng (fc2694)
+
+Phillip Le (pnl2111)
+
+Claudia Cortell (ccc2223)
