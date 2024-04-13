@@ -1,0 +1,12 @@
+#welcome-div{
+    font-size: 30px;
+    padding-top:  10px;
+    padding-bottom:  10px;
+    margin-bottom: 40px;
+}
+
+.clickable {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0066cc;
+}

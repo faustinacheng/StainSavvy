@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+    var jsonData = {{ data|tojson }};
+</script>
+<script src="{{ url_for('static', filename='home.js') }}"></script>
+
+<b id="welcome-div">Welcome to StainSavvy</b>
+
+
+{% endblock %}

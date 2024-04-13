@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script src="{{url_for('static', filename='learn.js')}}"></script>
+
+<script>
+    var itemData = {{ item|tojson }};
+    console.log(item);
+</script>
+
+<div id="item-info">
+    <!--populate here-->
+</div>
+
+
+{% endblock %}
