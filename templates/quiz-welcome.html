@@ -2,7 +2,6 @@
 
 {% block content %}
 
-<!-- <script src="{{ url_for('static', filename='home.js') }}"></script> -->
 
 <div>
     <div class="p-3">
@@ -18,8 +17,7 @@
 
     </div>
     <div class="p-3">
-        <!-- TODO: Link to last learning item -->
-        <a href="/learn/1" role="button" class="btn btn-primary">&#8592;</a>
+        <a href="/learn/{{ num }}" role="button" class="btn btn-primary">&#8592;</a>
     </div>
 </div>
 

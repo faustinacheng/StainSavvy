@@ -26,7 +26,7 @@ def learn_item(id):
 
 @app.route("/quiz")
 def quiz_welcome():
-    return render_template("quiz-welcome.html", data=data)
+    return render_template("quiz-welcome.html", num=num_learn_items)
 
 
 @app.route("/quiz/<id>")
