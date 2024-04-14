@@ -28,32 +28,82 @@
     "1": { 
         "id": 1,
         "question-type": "multiple-choice",
-        "quiz-image": "quiz1.jpg",
-        "question": "Here is the text for question 1",
-        "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
-        "answer": 2
+        "question": "What kind of stain is this?",
+        "quiz-image": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_566/stock%2Fcustom%20stock%2Fat-cleaning-stock-white-shirt-coffee-stain",
+        "options": ["Blood", "Marker", "Coffee", "Grass"],
+        "answer": "Coffee"
     },
-    "2": { 
+    "2":{
         "id": 2,
-        "question-type": "order-steps",
-        "quiz-image": "quiz2.jpg",
-        "question": "Here is the text for question 2",
-        "steps": ["step2", "step3", "step1"],
-        "answer": ["step1", "step2", "step3"]
-    },
-    "3":{
-        "id": 3,
         "question-type": "drag-items",
-        "question": "Here is the text for question 3",
+        "quiz-image": "https://cdn.shopify.com/s/files/1/1180/2404/files/AdobeStock_398802659_480x480.jpg?v=1646676346",
+        "question": "Drag the proper 3 cleaning steps onto the grass stain.",
         "items": ["item1", "item2", "item3", "item4", "item5"],
         "answer": ["item2", "item4", "item5"]
     },
-    "4":{
+    "3": { 
+        "id": 3,
+        "question-type": "order-steps",
+        "quiz-image": "https://www.rd.com/wp-content/uploads/2021/02/20210226-StainsHub-AD-0246.jpg",
+        "question": "Put the steps for removing a blood stain in order.",
+        "steps": ["Rinse with cold water", "Soak fabric in cold water", "Massage liquid detergent or hydrogen peroxide into stain"],
+        "answer": ["Soak fabric in cold water", "Massage liquid detergent or hydrogen peroxide into stain", "Rinse with cold water"]
+    },
+    "4": { 
         "id": 4,
+        "question-type": "multiple-choice",
+        "question": "You discover an oily reddish stain on clothing. Which of these could it be?",
+        "quiz-image": "https://img.freepik.com/premium-photo/food-stains-shirt-top-view-tomato-sauce-dirt-white-shirt_648871-23.jpg",
+        "options": ["Coffee", "Marker", "Ketchup", "Wine", "Blood", "Grass"],
+        "answer": "Ketchup"
+    },
+    "5":{
+        "id": 5,
         "question-type": "select-item",
-        "question": "Here is the text for question 4",
+        "question": "Which cleaning item should you use to remove this stain? Select from below.",
+        "quiz-image": "https://cdn.hswstatic.com/gif/gettyimages-523504172.jpg",
         "items": ["item1", "item2", "item3", "item4", "item5"],
         "answer": "item4"
+    },
+    "6": { 
+        "id": 6,
+        "question-type": "multiple-choice",
+        "question": "Why should you spot test hydrogen peroxide before using?",
+        "quiz-image": "https://pics.walgreens.com/prodimg/588610/900.jpg",
+        "options": ["It can fade colors of clothing", "It can ruin white clothing", "It can worsen the stain", "It can be dangerous to your skin"],
+        "answer": "It can fade colors of clothing"
+    },
+    "7": { 
+        "id": 7,
+        "question-type": "order-steps",
+        "quiz-image": "https://www.wikihow.com/images/thumb/0/0b/Get-a-Red-Wine-Stain-out-of-a-White-Linen-Shirt-Step-2-Version-5.jpg/550px-nowatermark-Get-a-Red-Wine-Stain-out-of-a-White-Linen-Shirt-Step-2-Version-5.jpg",
+        "question": "Put the steps for removing a wine stain in order.",
+        "steps": ["Rub laundry detergent into stain", "Let sit for 20 minutes", "Wash item with cold water", "Soak in white vinegar"],
+        "answer": ["Soak in white vinegar", "Rub laundry detergent into stain", "Let sit for 20 minutes", "Wash item with cold water"]
+    },
+    "8": { 
+        "id": 8,
+        "question-type": "select-item",
+        "question": "Which cleaning item should you use to remove this stain? Select from below.",
+        "quiz-image": "https://www.rd.com/wp-content/uploads/2021/02/20210226-StainsHub-AD-0246.jpg",
+        "items": ["item1", "item2", "item3", "item4", "item5"],
+        "answer": "item4"
+    },
+    "9":{
+        "id": 9,
+        "question-type": "drag-items",
+        "quiz-image": "https://www.maid2match.com.au/wp-content/uploads/2023/03/How-To-Get-A-Coffee-Stain-Out-Of-Clothes.jpg",
+        "question": "Drag the proper 3 cleaning items onto the coffee stain.",
+        "items": ["item1", "item2", "item3", "item4", "item5", "item6"],
+        "answer": ["item2", "item4", "item5"]
+    },
+    "10": { 
+        "id": 10,
+        "question-type": "order-steps",
+        "quiz-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1aaLrsSgs2DKmpDq1VFdCsljzSmNOF40BAhHDhHg_Yg&s",
+        "question": "Put the steps for removing a wine stain in order.",
+        "steps": ["Rinse item with cold water", "Let sit for 20 minutes", "Apply paste to stain", "Mix equal parts baking soda and hydrogen peroxide into a paste"],
+        "answer": ["Mix equal parts baking soda and hydrogen peroxide into a paste", "Apply paste to stain", "Let sit for 20 minutes", "Rinse item with cold water"]
     }
   }
 

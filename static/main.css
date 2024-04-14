@@ -18,3 +18,9 @@
 .nav-item {
     margin-left: 10px;
 }
+
+
+.form-check {
+    text-align: left;
+    margin-bottom: 10px; /* Adjust spacing between options if needed */
+}

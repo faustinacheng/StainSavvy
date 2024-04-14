@@ -2,18 +2,27 @@
 
 {% block content %}
 <script>
-    var quizData = {{ quiz| tojson }};
+    var quizData = {{ quiz_item| tojson }};
     var numItems = {{ num }};
 </script>
 <script src="{{ url_for('static', filename='quiz.js') }}"></script>
 
 <div>
     <div class="p-3">
-        <h1>Quiz</h1>
+        <h3>Question {{quiz_item["id"]}} of {{num}}</h3>
     </div>
     <div class="p-5 text-center">
-        quiz question goes here
-
+        <h3>{{quiz_item["question"]}}</h2>
+        <img src='{{quiz_item["quiz-image"]}}' class='img-fluid' width='300' alt='Quiz Question {{quiz_item["id"]}} Image'>
+        {% if quiz_item["question-type"] == "multiple-choice" %}
+            {% include "multiple_choice_quiz.html" %}
+        {% elif quiz_item["question-type"] == "drag-items" %}
+            {% include "drag_items_quiz.html" %}
+        {% elif quiz_item["question-type"] == "order-steps" %}
+            {% include "order_steps_quiz.html" %}
+        {% elif quiz_item["question-type"] == "select-item" %}
+            {% include "select_item_quiz.html" %}
+        {% endif %}
     </div>
     <div class="p-3 d-flex justify-content-between">
         <a href="#" id="back-button" role="button" class="btn btn-primary">&#8592;</a>

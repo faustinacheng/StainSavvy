@@ -19,14 +19,10 @@
         <div class="col-4 p-5">
             Stains you will learn about:
             <ul>
-                <li>Grass</li>
-                <li>Coffee</li>
-                <li>Blood</li>
-                <li>Wine</li>
-                <li>Ketchup</li>
-                <li>Marker</li>
+                {% for key, stain in data["learn"].items() %}
+                <li>{{ stain["stain"] }}</li>
+                {% endfor %}
             </ul>
-
         </div>
     </div>
     <div class="p-3 text-right">

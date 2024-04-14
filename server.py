@@ -22,32 +22,33 @@ def welcome():
 @app.route("/learn/<id>")
 def learn_item(id):
     print(f"viewing  {format(id)}")
-    item = data["learn"].get(id)
-    return render_template("learn.html", item=item, num=num_learn_items)
+    learn_item = data["learn"].get(id)
+    return render_template("learn.html", learn_item=learn_item, num=num_learn_items)
 
 
 @app.route("/quiz")
 def quiz_welcome():
-    return render_template("quiz-welcome.html", num=num_learn_items)
     #clear the user_quiz_answers dictionary
+    return render_template("quiz-welcome.html", num=num_learn_items)
 
 
 @app.route("/quiz/<id>")
 def quiz_item(id):
     print(f"viewing  {format(id)}")
-    quiz = data["quiz"].get(id)
-    return render_template("quiz.html", quiz=quiz, num=num_quiz_items)
+    quiz_item = data["quiz"].get(id)
+    return render_template("quiz.html", quiz_item=quiz_item, num=num_quiz_items)
 
 
 @app.route("/quiz/results")
 def quiz_results():
-    return render_template("quiz-results.html")
-    #iterate through user_quiz_answers
+    #iterate through user_quiz_answers and calculate user's score
+    return render_template("quiz-results.html", num=num_quiz_items)
+    
 
 
 # AJAX FUNCTIONS
 
-#function for adding to user_quiz_answers
+#need a function for adding an entry to user_quiz_answers, should be of form {id: answer}
 
 
 # @app.route('/search', methods=['POST'])

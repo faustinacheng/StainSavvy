@@ -4,31 +4,30 @@
 <script src="{{url_for('static', filename='learn.js')}}"></script>
 
 <script>
-    var itemData = {{ item| tojson }};
+    var itemData = {{ learn_item| tojson }};
     console.log(itemData);
     var numItems = {{ num }};
 </script>
 
 <div id="item-info">
     <div class="p-3">
-        <h1>{{item["stain"]}} Stains</h1>
+        <h1>{{learn_item["stain"]}} Stains</h1>
     </div>
     <div class="row">
         <div class="col-6 p-5">
-            <img src='{{url_for("static", filename="images/" + item["image"])}}' class='img-fluid'
-                alt='{{item["stain"]}} Stain Image'>
+            <img src='{{learn_item["image"]}}' class='img-fluid' alt='{{learn_item["stain"]}} Stain Image'>
             <p>
-                {{item["content"]["identify"]}}
+                {{learn_item["content"]["identify"]}}
             </p>
         </div>
         <div class="col-6 p-5">
             <div id="removal-wrapper">
                 <h2>Removal:</h2>
                 <ol>
-                    {% for step in item["content"]["removal"].values() %}
+                    {% for step in learn_item["content"]["removal"].values() %}
                     <li>{{step["step"]}}
-                        <img src='{{url_for("static", filename="images/" + step["removal-image"])}}' class='img-fluid'
-                            alt='{{item["stain"]}} Stain Removal Image'>
+                        <img src='{{step["removal-image"]}}' class='img-fluid'
+                            alt='{{learn_item["stain"]}} Stain Removal Image'>
                     </li>
                     {% endfor %}
                 </ol>
@@ -36,7 +35,7 @@
             </div>
             <div>
                 <p>
-                    {{item["content"]["extra"]}}
+                    {{learn_item["content"]["extra"]}}
                 </p>
             </div>
         </div>
