@@ -1,26 +1,141 @@
 {
   "learn": {
     "1": { 
-        "id": "1", 
+        "id": 1, 
         "stain": "Grass", 
-        "image": "grass.jpg",
+        "image": "https://rockingreen.com/cdn/shop/articles/Grass-Stains-BIG-56a58ed45f9b58b7d0dd6a54_1200x1200.jpg?v=1584633188",
         "content": {
-            "identify": "This is how to identify grass stains",
+            "identify": "Grass stains are often green or brown and appear in streaks or smudges.",
             "removal": {
                 "1": {
-                    "step": "remove grass stain step 1",
+                    "step": "Mix white vinegar and water in equal parts",
                     "removal-image": "image_url_step_1.jpg"
                 },
                 "2": {
-                    "step": "remove grass stain step 2",
+                    "step": "Lightly scrub solution into the stain with an old toothbrush",
                     "removal-image": "image_url_step_2.jpg"
                 },
                 "3": {
-                    "step": "remove grass stain step 3",
+                    "step": "Rinse with cold water",
                     "removal-image": "image_url_step_3.jpg"
                 }
             },
-            "extra": "extra information about grass stains"
+            "extra": "Always use cold water when removing stains! Hot water can set the stain in the clothing permanently."
+        }
+    },
+    "2": { 
+        "id": 2, 
+        "stain": "Coffee", 
+        "image": "coffee.jpg",
+        "content": {
+            "identify": "This is how to identify coffee stains",
+            "removal": {
+                "1": {
+                    "step": "remove coffee stain step 1",
+                    "removal-image": "image_url_step_1.jpg"
+                },
+                "2": {
+                    "step": "remove coffee stain step 2",
+                    "removal-image": "image_url_step_2.jpg"
+                },
+                "3": {
+                    "step": "remove coffee stain step 3",
+                    "removal-image": "image_url_step_3.jpg"
+                }
+            },
+            "extra": ""
+        }
+    },
+    "3": { 
+        "id": 3, 
+        "stain": "Blood", 
+        "image": "blood.jpg",
+        "content": {
+            "identify": "This is how to identify blood stains",
+            "removal": {
+                "1": {
+                    "step": "remove blood stain step 1",
+                    "removal-image": "image_url_step_1.jpg"
+                },
+                "2": {
+                    "step": "remove blood stain step 2",
+                    "removal-image": "image_url_step_2.jpg"
+                },
+                "3": {
+                    "step": "remove blood stain step 3",
+                    "removal-image": "image_url_step_3.jpg"
+                }
+            },
+            "extra": "extra information about blood stains"
+        }
+    },
+    "4": { 
+        "id": 4, 
+        "stain": "Wine", 
+        "image": "wine.jpg",
+        "content": {
+            "identify": "This is how to identify grwineass stains",
+            "removal": {
+                "1": {
+                    "step": "remove wine stain step 1",
+                    "removal-image": "image_url_step_1.jpg"
+                },
+                "2": {
+                    "step": "remove wine stain step 2",
+                    "removal-image": "image_url_step_2.jpg"
+                },
+                "3": {
+                    "step": "remove wine stain step 3",
+                    "removal-image": "image_url_step_3.jpg"
+                }
+            },
+            "extra": ""
+        }
+    },
+    "5": { 
+        "id": 5, 
+        "stain": "Ketchup", 
+        "image": "ketchup.jpg",
+        "content": {
+            "identify": "This is how to identify ketchup stains",
+            "removal": {
+                "1": {
+                    "step": "remove ketchup stain step 1",
+                    "removal-image": "image_url_step_1.jpg"
+                },
+                "2": {
+                    "step": "remove ketchup stain step 2",
+                    "removal-image": "image_url_step_2.jpg"
+                },
+                "3": {
+                    "step": "remove ketchup stain step 3",
+                    "removal-image": "image_url_step_3.jpg"
+                }
+            },
+            "extra": "extra information about ketchup stains"
+        }
+    },
+    "6": { 
+        "id": 6, 
+        "stain": "Marker", 
+        "image": "marker.jpg",
+        "content": {
+            "identify": "This is how to identify marker stains",
+            "removal": {
+                "1": {
+                    "step": "remove marker stain step 1",
+                    "removal-image": "image_url_step_1.jpg"
+                },
+                "2": {
+                    "step": "remove marker stain step 2",
+                    "removal-image": "image_url_step_2.jpg"
+                },
+                "3": {
+                    "step": "remove marker stain step 3",
+                    "removal-image": "image_url_step_3.jpg"
+                }
+            },
+            "extra": "The extra paper towel behind prevents the stain from bleeding through to another layer of the fabric."
         }
     }
   },

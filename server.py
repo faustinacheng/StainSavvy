@@ -21,7 +21,7 @@ def welcome():
 
 @app.route("/learn/<id>")
 def learn_item(id):
-    print(f"viewing  {format(id)}")
+    print(f"viewing learn page {format(id)}")
     learn_item = data["learn"].get(id)
     return render_template("learn.html", learn_item=learn_item, num=num_learn_items)
 
@@ -34,7 +34,7 @@ def quiz_welcome():
 
 @app.route("/quiz/<id>")
 def quiz_item(id):
-    print(f"viewing  {format(id)}")
+    print(f"viewing quiz page {format(id)}")
     quiz_item = data["quiz"].get(id)
     return render_template("quiz.html", quiz_item=quiz_item, num=num_quiz_items)
 

@@ -17,7 +17,7 @@
         <div class="col-6 p-5">
             <img src='{{learn_item["image"]}}' class='img-fluid' alt='{{learn_item["stain"]}} Stain Image'>
             <p>
-                {{learn_item["content"]["identify"]}}
+                {{learn_item["content"]["identify"] | safe}}
             </p>
         </div>
         <div class="col-6 p-5">
@@ -26,8 +26,7 @@
                 <ol>
                     {% for step in learn_item["content"]["removal"].values() %}
                     <li>{{step["step"]}}
-                        <img src='{{step["removal-image"]}}' class='img-fluid'
-                            alt='{{learn_item["stain"]}} Stain Removal Image'>
+                        <img src='{{step["removal-image"]}}' class='img-fluid' alt='{{learn_item["stain"]}} Stain Removal Image'>
                     </li>
                     {% endfor %}
                 </ol>
@@ -35,7 +34,7 @@
             </div>
             <div>
                 <p>
-                    {{learn_item["content"]["extra"]}}
+                    {{ learn_item["content"]["extra"]}}
                 </p>
             </div>
         </div>
