@@ -10,3 +10,7 @@ $(document).ready(function () {
         $("#next-button").attr("href", "/quiz/" + (quizData.id + 1));
     }
 });
+
+//add checking to make sure they've selected a quiz answer
+//when click next (valid answer)
+    //ajax call to backend to the user_quiz_answers dictionary

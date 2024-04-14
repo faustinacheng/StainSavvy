@@ -10,6 +10,8 @@ with open("static/data.json") as json_file:
 num_learn_items = len(data["learn"])
 num_quiz_items = len(data["quiz"])
 
+user_quiz_answers = {}
+
 
 # ROUTES
 @app.route("/")
@@ -27,6 +29,7 @@ def learn_item(id):
 @app.route("/quiz")
 def quiz_welcome():
     return render_template("quiz-welcome.html", num=num_learn_items)
+    #clear the user_quiz_answers dictionary
 
 
 @app.route("/quiz/<id>")
@@ -39,9 +42,14 @@ def quiz_item(id):
 @app.route("/quiz/results")
 def quiz_results():
     return render_template("quiz-results.html")
+    #iterate through user_quiz_answers
 
 
 # AJAX FUNCTIONS
+
+#function for adding to user_quiz_answers
+
+
 # @app.route('/search', methods=['POST'])
 # def search():
 #     global results
