@@ -22,24 +22,32 @@
         </div>
         <div class="col-6 p-5">
             <div id="removal-wrapper">
-                <h2>Removal:</h2>
+                <h3>Removal:</h3>
+                
                 <ol>
                     {% for step in learn_item["content"]["removal"].values() %}
-                    <li>{{step["step"]}}
-                        <img src='{{step["removal-image"]}}' class='img-fluid' alt='{{learn_item["stain"]}} Stain Removal Image'>
+                    <li>
+                        <div class="row p-2">
+                            <div class="col-9">
+                                {{ step["step"] }}
+                            </div>
+                            <div class="col-3">
+                                <img src='{{ step["removal-image"] }}' class='img-fluid' alt='{{ learn_item["stain"] }} Stain Removal Image'>
+                            </div>
+                        </div>
                     </li>
                     {% endfor %}
                 </ol>
 
             </div>
             <div>
-                <p>
-                    {{ learn_item["content"]["extra"]}}
-                </p>
+                {% if "extra" in learn_item["content"] %}
+                    <p><em>{{ learn_item["content"]["extra"] }}</em></p>
+                {% endif %}
             </div>
         </div>
     </div>
-    <div class="p-3 d-flex justify-content-between">
+    <div id="nav-buttons" class="p-3 d-flex justify-content-between">
         <a href="#" id="back-button" role="button" class="btn btn-primary">&#8592;</a>
         <a href="#" id="next-button" role="button" class="btn btn-primary">&#8594;</a>
     </div>
