@@ -9,15 +9,15 @@
             "removal": {
                 "1": {
                     "step": "Mix white vinegar and water in equal parts",
-                    "removal-image": "image_url_step_1.jpg"
+                    "removal-image": "https://rockingreen.com/cdn/shop/articles/Grass-Stains-BIG-56a58ed45f9b58b7d0dd6a54_1200x1200.jpg?v=1584633188"
                 },
                 "2": {
                     "step": "Lightly scrub solution into the stain with an old toothbrush",
-                    "removal-image": "image_url_step_2.jpg"
+                    "removal-image": "https://rockingreen.com/cdn/shop/articles/Grass-Stains-BIG-56a58ed45f9b58b7d0dd6a54_1200x1200.jpg?v=1584633188"
                 },
                 "3": {
                     "step": "Rinse with cold water",
-                    "removal-image": "image_url_step_3.jpg"
+                    "removal-image": "https://rockingreen.com/cdn/shop/articles/Grass-Stains-BIG-56a58ed45f9b58b7d0dd6a54_1200x1200.jpg?v=1584633188"
                 }
             },
             "extra": "Always use cold water when removing stains! Hot water can set the stain in the clothing permanently."
@@ -26,21 +26,21 @@
     "2": { 
         "id": 2, 
         "stain": "Coffee", 
-        "image": "coffee.jpg",
+        "image": "https://storables.com/wp-content/uploads/2023/08/how-to-remove-coffee-stains-on-clothing-with-3-household-products-1693380058.jpg",
         "content": {
             "identify": "This is how to identify coffee stains",
             "removal": {
                 "1": {
                     "step": "remove coffee stain step 1",
-                    "removal-image": "image_url_step_1.jpg"
+                    "removal-image": "https://storables.com/wp-content/uploads/2023/08/how-to-remove-coffee-stains-on-clothing-with-3-household-products-1693380058.jpg"
                 },
                 "2": {
                     "step": "remove coffee stain step 2",
-                    "removal-image": "image_url_step_2.jpg"
+                    "removal-image": "https://storables.com/wp-content/uploads/2023/08/how-to-remove-coffee-stains-on-clothing-with-3-household-products-1693380058.jpg"
                 },
                 "3": {
                     "step": "remove coffee stain step 3",
-                    "removal-image": "image_url_step_3.jpg"
+                    "removal-image": "https://storables.com/wp-content/uploads/2023/08/how-to-remove-coffee-stains-on-clothing-with-3-household-products-1693380058.jpg"
                 }
             },
             "extra": ""
@@ -49,21 +49,21 @@
     "3": { 
         "id": 3, 
         "stain": "Blood", 
-        "image": "blood.jpg",
+        "image": "https://www.rd.com/wp-content/uploads/2021/02/20210217_StainsHub_AD_3.jpg",
         "content": {
             "identify": "This is how to identify blood stains",
             "removal": {
                 "1": {
                     "step": "remove blood stain step 1",
-                    "removal-image": "image_url_step_1.jpg"
+                    "removal-image": "https://www.rd.com/wp-content/uploads/2021/02/20210217_StainsHub_AD_3.jpg"
                 },
                 "2": {
                     "step": "remove blood stain step 2",
-                    "removal-image": "image_url_step_2.jpg"
+                    "removal-image": "https://www.rd.com/wp-content/uploads/2021/02/20210217_StainsHub_AD_3.jpg"
                 },
                 "3": {
                     "step": "remove blood stain step 3",
-                    "removal-image": "image_url_step_3.jpg"
+                    "removal-image": "https://www.rd.com/wp-content/uploads/2021/02/20210217_StainsHub_AD_3.jpg"
                 }
             },
             "extra": "extra information about blood stains"
@@ -72,21 +72,21 @@
     "4": { 
         "id": 4, 
         "stain": "Wine", 
-        "image": "wine.jpg",
+        "image": "https://liquidlaundromats.com/wp-content/uploads/2022/08/red-wine-stain.jpg",
         "content": {
-            "identify": "This is how to identify grwineass stains",
+            "identify": "This is how to identify wine stains",
             "removal": {
                 "1": {
                     "step": "remove wine stain step 1",
-                    "removal-image": "image_url_step_1.jpg"
+                    "removal-image": "https://liquidlaundromats.com/wp-content/uploads/2022/08/red-wine-stain.jpg"
                 },
                 "2": {
                     "step": "remove wine stain step 2",
-                    "removal-image": "image_url_step_2.jpg"
+                    "removal-image": "https://liquidlaundromats.com/wp-content/uploads/2022/08/red-wine-stain.jpg"
                 },
                 "3": {
                     "step": "remove wine stain step 3",
-                    "removal-image": "image_url_step_3.jpg"
+                    "removal-image": "https://liquidlaundromats.com/wp-content/uploads/2022/08/red-wine-stain.jpg"
                 }
             },
             "extra": ""
@@ -95,44 +95,44 @@
     "5": { 
         "id": 5, 
         "stain": "Ketchup", 
-        "image": "ketchup.jpg",
+        "image": "https://www.tasteofhome.com/wp-content/uploads/2023/03/Ketchup-Stain-Removal-TOHSLPL23_PU6186_P2_MD_03_23_3b.jpg?fit=700,467",
         "content": {
             "identify": "This is how to identify ketchup stains",
             "removal": {
                 "1": {
                     "step": "remove ketchup stain step 1",
-                    "removal-image": "image_url_step_1.jpg"
+                    "removal-image": "https://www.tasteofhome.com/wp-content/uploads/2023/03/Ketchup-Stain-Removal-TOHSLPL23_PU6186_P2_MD_03_23_3b.jpg?fit=700,467"
                 },
                 "2": {
                     "step": "remove ketchup stain step 2",
-                    "removal-image": "image_url_step_2.jpg"
+                    "removal-image": "https://www.tasteofhome.com/wp-content/uploads/2023/03/Ketchup-Stain-Removal-TOHSLPL23_PU6186_P2_MD_03_23_3b.jpg?fit=700,467"
                 },
                 "3": {
                     "step": "remove ketchup stain step 3",
-                    "removal-image": "image_url_step_3.jpg"
+                    "removal-image": "https://www.tasteofhome.com/wp-content/uploads/2023/03/Ketchup-Stain-Removal-TOHSLPL23_PU6186_P2_MD_03_23_3b.jpg?fit=700,467"
                 }
             },
-            "extra": "extra information about ketchup stains"
+            "extra": "Remember that hydrogen peroxide can fade some colors of clothing. Always spot test first."
         }
     },
     "6": { 
         "id": 6, 
         "stain": "Marker", 
-        "image": "marker.jpg",
+        "image": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_487/at%2Forganize-clean%2F2023%2FStock%2FCustom%20Stock%20Shoots%2F2023-09-how-to-remove-sharpie-from-fabric%2Fhow-to-remove-sharpie-from-fabric-497",
         "content": {
             "identify": "This is how to identify marker stains",
             "removal": {
                 "1": {
                     "step": "remove marker stain step 1",
-                    "removal-image": "image_url_step_1.jpg"
+                    "removal-image": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_487/at%2Forganize-clean%2F2023%2FStock%2FCustom%20Stock%20Shoots%2F2023-09-how-to-remove-sharpie-from-fabric%2Fhow-to-remove-sharpie-from-fabric-497"
                 },
                 "2": {
                     "step": "remove marker stain step 2",
-                    "removal-image": "image_url_step_2.jpg"
+                    "removal-image": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_487/at%2Forganize-clean%2F2023%2FStock%2FCustom%20Stock%20Shoots%2F2023-09-how-to-remove-sharpie-from-fabric%2Fhow-to-remove-sharpie-from-fabric-497"
                 },
                 "3": {
                     "step": "remove marker stain step 3",
-                    "removal-image": "image_url_step_3.jpg"
+                    "removal-image": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_487/at%2Forganize-clean%2F2023%2FStock%2FCustom%20Stock%20Shoots%2F2023-09-how-to-remove-sharpie-from-fabric%2Fhow-to-remove-sharpie-from-fabric-497"
                 }
             },
             "extra": "The extra paper towel behind prevents the stain from bleeding through to another layer of the fabric."
