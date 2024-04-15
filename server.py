@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify, json
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -10,45 +11,51 @@ with open("static/data.json") as json_file:
 num_learn_items = len(data["learn"])
 num_quiz_items = len(data["quiz"])
 
+visited_times = {}
 user_quiz_answers = {}
 
 
 # ROUTES
 @app.route("/")
 def welcome():
+    visited_times["learn_welcome"] = datetime.now()
+    print(visited_times)
     return render_template("home.html", data=data)
 
 
 @app.route("/learn/<id>")
 def learn_item(id):
     print(f"viewing learn page {format(id)}")
+    visited_times["learn" + str(id)] = datetime.now()
     learn_item = data["learn"].get(id)
     return render_template("learn.html", learn_item=learn_item, num=num_learn_items)
 
 
 @app.route("/quiz")
 def quiz_welcome():
-    #clear the user_quiz_answers dictionary
+    visited_times["quiz_welcome"] = datetime.now()
+    # clear the user_quiz_answers dictionary
     return render_template("quiz-welcome.html", num=num_learn_items)
 
 
 @app.route("/quiz/<id>")
 def quiz_item(id):
     print(f"viewing quiz page {format(id)}")
+    visited_times["quiz" + str(id)] = datetime.now()
     quiz_item = data["quiz"].get(id)
     return render_template("quiz.html", quiz_item=quiz_item, num=num_quiz_items)
 
 
 @app.route("/quiz/results")
 def quiz_results():
-    #iterate through user_quiz_answers and calculate user's score
+    visited_times["quiz_results"] = datetime.now()
+    # iterate through user_quiz_answers and calculate user's score
     return render_template("quiz-results.html", num=num_quiz_items)
-    
 
 
 # AJAX FUNCTIONS
 
-#need a function for adding an entry to user_quiz_answers, should be of form {id: answer}
+# need a function for adding an entry to user_quiz_answers, should be of form {id: answer}
 
 
 # @app.route('/search', methods=['POST'])
