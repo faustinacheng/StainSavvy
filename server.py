@@ -43,8 +43,27 @@ def quiz_item(id):
     print(f"viewing quiz page {format(id)}")
     visited_times["quiz" + str(id)] = datetime.now()
     quiz_item = data["quiz"].get(id)
-    return render_template("quiz.html", quiz_item=quiz_item, num=num_quiz_items)
+    print(user_quiz_answers)
+    return render_template("quiz.html", quiz_item=quiz_item, num=num_quiz_items, user_quiz_answers=user_quiz_answers)
 
+
+@app.route("/quiz/results")
+def quiz_results():
+    global user_quiz_answers
+    visited_times["quiz_results"] = datetime.now()
+    #iterate through user_quiz_answers and calculate user's score
+    correct = 0 
+    for id, ans in user_quiz_answers.items():
+        q_dict = data["quiz"][f"{id}"]
+        if ans == q_dict["answer"]:
+            correct += 1
+    user_quiz_answers.clear()
+    return render_template("quiz-results.html", num=num_quiz_items, correct=correct)
+
+
+
+
+# AJAX FUNCTIONS
 @app.route("/quiz/<int:id>/log_answer", methods=['POST'])
 def log_quiz_answer(id):
     if request.is_json:
@@ -56,40 +75,7 @@ def log_quiz_answer(id):
     else:
         return jsonify({"status": "error", "message": "Request was not JSON"}), 400
 
-@app.route("/quiz/results")
-def quiz_results():
-    global user_quiz_answers
-    visited_times["quiz_results"] = datetime.now()
-    count = 0 
-    for id, ans in user_quiz_answers.items():
-        q_dict = data["quiz"][f"{id}"]
-        if ans == q_dict["answer"]:
-            count += 1
-    # iterate through user_quiz_answers and calculate user's score
-    user_quiz_answers.clear()
-    return render_template("quiz-results.html", num=num_quiz_items, correct=count)
 
-
-# AJAX FUNCTIONS
-
-# need a function for adding an entry to user_quiz_answers, should be of form {id: answer}
-
-
-# @app.route('/search', methods=['POST'])
-# def search():
-#     global results
-#     newResults = []
-
-#     json_data = request.get_json()
-#     search_term = json_data["term"]
-#     print(f"searched for {search_term}")
-
-#     for store_id, store_data in data.items():
-#         if search_term in store_data.get('name', ''):
-#             newResults.append(store_data)
-
-#     results = newResults
-#     return jsonify({'results': results})
 
 if __name__ == "__main__":
     app.run(debug=True)

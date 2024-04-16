@@ -1,5 +1,4 @@
 function log_answer(answer){
-
     var base = window.location.origin + window.location.pathname;
     if (base.endsWith('/')){
         base = base.slice(0, -1);
@@ -18,6 +17,15 @@ function log_answer(answer){
         }
     })
 }
+
+//save previously entered answers
+$(document).ready(function() {
+    if (userQuizAnswers.hasOwnProperty(quizData.id)) {
+        console.log("YESS")
+        $('input[name="quiz_option"][value="' + userQuizAnswers[quizData.id] + '"]').prop('checked', true);
+    }
+});
+
 
 $(document).ready(function () {
     if (quizData.id == 1) {
