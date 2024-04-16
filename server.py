@@ -34,7 +34,7 @@ def learn_item(id):
 @app.route("/quiz")
 def quiz_welcome():
     visited_times["quiz_welcome"] = datetime.now()
-    # clear the user_quiz_answers dictionary
+    user_quiz_answers.clear()
     return render_template("quiz-welcome.html", num=num_learn_items)
 
 
@@ -45,12 +45,29 @@ def quiz_item(id):
     quiz_item = data["quiz"].get(id)
     return render_template("quiz.html", quiz_item=quiz_item, num=num_quiz_items)
 
+@app.route("/quiz/<int:id>/log_answer", methods=['POST'])
+def log_quiz_answer(id):
+    if request.is_json:
+        global user_quiz_answers
+        data = request.get_json()
+        answer = data['answer']
+        user_quiz_answers[id] = answer
+        return jsonify({"status": "success", "message": ""}), 200
+    else:
+        return jsonify({"status": "error", "message": "Request was not JSON"}), 400
 
 @app.route("/quiz/results")
 def quiz_results():
+    global user_quiz_answers
     visited_times["quiz_results"] = datetime.now()
+    count = 0 
+    for id, ans in user_quiz_answers.items():
+        q_dict = data["quiz"][f"{id}"]
+        if ans == q_dict["answer"]:
+            count += 1
     # iterate through user_quiz_answers and calculate user's score
-    return render_template("quiz-results.html", num=num_quiz_items)
+    user_quiz_answers.clear()
+    return render_template("quiz-results.html", num=num_quiz_items, correct=count)
 
 
 # AJAX FUNCTIONS
