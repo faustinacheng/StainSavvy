@@ -14,13 +14,13 @@
         <h1>{{learn_item["stain"]}} Stains</h1>
     </div>
     <div class="row">
-        <div class="col-6 p-5">
+        <div class="col-5 p-5">
             <img src='{{learn_item["image"]}}' class='img-fluid' alt='{{learn_item["stain"]}} Stain Image'>
             <p>
                 {{learn_item["content"]["identify"]}}
             </p>
         </div>
-        <div class="col-6 p-5">
+        <div class="col-7 p-5">
             <div id="removal-wrapper">
                 <h3>Removal:</h3>
                 
@@ -28,10 +28,10 @@
                     {% for step in learn_item["content"]["removal"].values() %}
                     <li>
                         <div class="row p-2">
-                            <div class="col-8">
+                            <div class="col-7">
                                 {{ step["step"] }}
                             </div>
-                            <div class="col-4">
+                            <div class="col-5">
                                 <img src='{{ step["removal-image"] }}' class='img-fluid' alt='{{ learn_item["stain"] }} Stain Removal Image'>
                             </div>
                         </div>
