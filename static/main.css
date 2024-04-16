@@ -47,3 +47,7 @@
 .quiz-result-buttons{
     justify-content: center;
 }
+
+.error-message{
+    color: red;
+}
