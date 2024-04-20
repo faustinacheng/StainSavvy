@@ -1,3 +1,128 @@
+:root {
+    --base: #97DFFC;
+    --accent: #613DC1;
+    --dark-grey: #343a40;
+    --light-grey: #e8e8e8;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+}
+
+.wrapper {
+    max-width: 1200px; /* Set the maximum width of the div */
+    margin: 0 auto; /* Center the div */
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.base {
+    color: var(--base);
+}
+
+.light-grey {
+    color: var(--light-grey);
+}
+
+.dark-grey {
+    color: var(--dark-grey);
+}
+
+a {
+    color: var(--dark-grey);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+/* NAVBAR */
+
+#purple-logo {
+    height: 30px;
+}
+.navbar {
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 2px #d0d0d0;
+    color: var(--dark-grey);
+    font-size: 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.active {
+    background: var(--base);
+    border-radius: 10px;
+    
+}
+
+.logo {
+    font-family: 'Pacifico', sans-serif;
+    color: var(--accent);
+    font-size: 25px;
+}
+
+.nav-item {
+    padding: 10px 25px;
+}
+
+/* HOME PAGE */
+
+#home-wrapper {
+    background-image: url('images/splatter-bg.png');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+#main-title {
+    font-size: 30px;
+}
+
+#stains-list-wrapper {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+#stains-list {
+    line-height: 2;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+#stains-list span {
+    color: var(--dark-grey);
+}
+
+
+.main-wrapper {
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 13px 2px #d0d0d0;
+}
+
 #welcome-div{
     font-size: 30px;
     padding-top:  10px;
@@ -8,15 +133,17 @@
 .clickable {
     cursor: pointer;
     text-decoration: underline;
-    color: #0066cc;
+    /* color: #0066cc; */
 }
 
-.nav-item.active a {
+.button {
+    background: var(--base);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
     font-weight: bold;
-}
-
-.nav-item {
-    margin-left: 10px;
+    cursor: pointer;
 }
 
 #back-button {
