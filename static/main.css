@@ -130,11 +130,7 @@ a:hover {
     margin-bottom: 40px;
 }
 
-.clickable {
-    cursor: pointer;
-    text-decoration: underline;
-    /* color: #0066cc; */
-}
+
 
 .button {
     background: var(--base);
@@ -144,6 +140,25 @@ a:hover {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+}
+
+/* IMAGE SELECT QUIZ */
+
+.image-option .form-check-input {
+    display: none; /* Hide the radio button */
+}
+
+.image-option .form-check-input:checked + .form-check-label img {
+    border: 2px solid var(--accent); /* Add a border to the selected image */
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+.select-image {
+    display: inline-flex;
+    height: 130px;
 }
 
 #back-button {
@@ -177,4 +192,10 @@ a:hover {
 
 .error-message{
     color: red;
+}
+
+.clickable {
+    cursor: pointer;
+    text-decoration: underline;
+    /* color: #0066cc; */
 }

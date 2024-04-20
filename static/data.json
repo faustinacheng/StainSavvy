@@ -183,8 +183,8 @@
         "question-type": "select-item",
         "question": "Which cleaning item should you use to remove this stain? Select from below.",
         "quiz-image": "https://cdn.hswstatic.com/gif/gettyimages-523504172.jpg",
-        "items": ["https://i.postimg.cc/SN3dhVWB/rubbingalcohol.png", "https://i.postimg.cc/jjQ4ybGT/dishsoap.png", "https://i.postimg.cc/xdSPkCpg/bakingsoda.png", "https://i.postimg.cc/8kywyTsP/vinegar.png", "https://i.postimg.cc/JzXq4JxG/peroxide.png"],
-        "answer": "https://i.postimg.cc/SN3dhVWB/rubbingalcohol.png"
+        "items": [["https://i.postimg.cc/SN3dhVWB/rubbingalcohol.png", "Rubbing Alcohol"], ["https://i.postimg.cc/jjQ4ybGT/dishsoap.png", "Dish Soap"], ["https://i.postimg.cc/xdSPkCpg/bakingsoda.png", "Baking Soda"], ["https://i.postimg.cc/8kywyTsP/vinegar.png", "Vinegar"], ["https://i.postimg.cc/JzXq4JxG/peroxide.png", "Hydrogen Peroxide"]],
+        "answer": "Rubbing Alcohol"
     },
     "6": { 
         "id": 6,
@@ -207,8 +207,8 @@
         "question-type": "select-item",
         "question": "Which cleaning item should you use to remove this stain from white clothing? Select from below.",
         "quiz-image": "https://www.shutterstock.com/image-photo/female-hands-showing-dirty-blood-600nw-2370900657.jpg",
-        "items": ["https://i.postimg.cc/SN3dhVWB/rubbingalcohol.png", "https://i.postimg.cc/jjQ4ybGT/dishsoap.png", "https://i.postimg.cc/xdSPkCpg/bakingsoda.png", "https://i.postimg.cc/8kywyTsP/vinegar.png", "https://i.postimg.cc/JzXq4JxG/peroxide.png"],
-        "answer": "https://i.postimg.cc/JzXq4JxG/peroxide.png"
+        "items": [["https://i.postimg.cc/SN3dhVWB/rubbingalcohol.png", "Rubbing Alcohol"], ["https://i.postimg.cc/jjQ4ybGT/dishsoap.png", "Dish Soap"], ["https://i.postimg.cc/xdSPkCpg/bakingsoda.png", "Baking Soda"], ["https://i.postimg.cc/8kywyTsP/vinegar.png", "Vinegar"], ["https://i.postimg.cc/JzXq4JxG/peroxide.png", "Hydrogen Peroxide"]],
+        "answer": "Hydrogen Peroxide"
     },
     "9":{
         "id": 9,

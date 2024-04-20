@@ -1,3 +1,12 @@
-<div>
-    <h3>This is a non-multiple choice question, implementing later</h3>
+<div class="d-flex justify-content-center">
+    {% for item in quiz_item["items"] %}
+    <div class="form-check image-option">
+        <input class="form-check-input" type="radio" name="quiz_option" id="option{{ loop.index }}"
+            value="{{ item[1] }}" required>
+        <label class="form-check-label" for="option{{ loop.index }}">
+            <img class="select-image" src="{{ item[0]}}" alt="{{ item[1]}}">
+        </label>
+    </div>
+    {% endfor %}
 </div>
+<p class="error-message"></p>

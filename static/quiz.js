@@ -1,31 +1,34 @@
-function log_answer(answer){
+function log_answer(answer) {
     var base = window.location.origin + window.location.pathname;
-    if (base.endsWith('/')){
+    if (base.endsWith("/")) {
         base = base.slice(0, -1);
     }
-    new_url = base + '/log_answer';
+    new_url = base + "/log_answer";
     $.ajax({
-        url: new_url, 
-        type: 'POST', 
-        contentType: 'application/json',
-        data: JSON.stringify({'answer':answer}), 
-        success: function(response){
-            console.log('Answer logged: ', response)
+        url: new_url,
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({ answer: answer }),
+        success: function (response) {
+            console.log("Answer logged: ", response);
         },
-        error: function(xhr, status, error){
-            console.error('Failed to log answer: ', error)
-        }
-    })
+        error: function (xhr, status, error) {
+            console.error("Failed to log answer: ", error);
+        },
+    });
 }
 
 //save previously entered answers
-$(document).ready(function() {
+$(document).ready(function () {
     if (userQuizAnswers.hasOwnProperty(quizData.id)) {
-        console.log("YESS")
-        $('input[name="quiz_option"][value="' + userQuizAnswers[quizData.id] + '"]').prop('checked', true);
+        console.log("YESS");
+        $(
+            'input[name="quiz_option"][value="' +
+                userQuizAnswers[quizData.id] +
+                '"]'
+        ).prop("checked", true);
     }
 });
-
 
 $(document).ready(function () {
     if (quizData.id == 1) {
@@ -41,23 +44,25 @@ $(document).ready(function () {
 });
 
 // Multiple-choice specific functions
-$(document).ready(function(){
-    if(quizData["question-type"] == "multiple-choice"){
-        $('#next-button').click(function(event){
-            if(!$('input[name="quiz_option"]:checked').val()){
+$(document).ready(function () {
+    if (
+        quizData["question-type"] == "multiple-choice" ||
+        quizData["question-type"] == "select-item"
+    ) {
+        $("#next-button").click(function (event) {
+            if (!$('input[name="quiz_option"]:checked').val()) {
                 event.preventDefault();
-                var errorMessage = document.querySelector('.error-message');
-                errorMessage.textContent = 'Please select at least one answer!'
-            }else{
-                var answer = $('input[name="quiz_option"]:checked').val()
-                var q_no = quizData.id
-                log_answer(answer)
+                var errorMessage = document.querySelector(".error-message");
+                errorMessage.textContent = "Please select at least one answer!";
+            } else {
+                var answer = $('input[name="quiz_option"]:checked').val();
+                var q_no = quizData.id;
+                log_answer(answer);
             }
         });
     }
-
 });
 
 //add checking to make sure they've selected a quiz answer
 //when click next (valid answer)
-    //ajax call to backend to the user_quiz_answers dictionary
+//ajax call to backend to the user_quiz_answers dictionary
