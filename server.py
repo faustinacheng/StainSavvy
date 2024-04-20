@@ -19,7 +19,6 @@ user_quiz_answers = {}
 @app.route("/")
 def welcome():
     visited_times["learn_welcome"] = datetime.now()
-    print(visited_times)
     return render_template("home.html", data=data)
 
 
@@ -44,15 +43,20 @@ def quiz_item(id):
     visited_times["quiz" + str(id)] = datetime.now()
     quiz_item = data["quiz"].get(id)
     print(user_quiz_answers)
-    return render_template("quiz.html", quiz_item=quiz_item, num=num_quiz_items, user_quiz_answers=user_quiz_answers)
+    return render_template(
+        "quiz.html",
+        quiz_item=quiz_item,
+        num=num_quiz_items,
+        user_quiz_answers=user_quiz_answers,
+    )
 
 
 @app.route("/quiz/results")
 def quiz_results():
     global user_quiz_answers
     visited_times["quiz_results"] = datetime.now()
-    #iterate through user_quiz_answers and calculate user's score
-    correct = 0 
+    # iterate through user_quiz_answers and calculate user's score
+    correct = 0
     for id, ans in user_quiz_answers.items():
         q_dict = data["quiz"][f"{id}"]
         if ans == q_dict["answer"]:
@@ -61,20 +65,17 @@ def quiz_results():
     return render_template("quiz-results.html", num=num_quiz_items, correct=correct)
 
 
-
-
 # AJAX FUNCTIONS
-@app.route("/quiz/<int:id>/log_answer", methods=['POST'])
+@app.route("/quiz/<int:id>/log_answer", methods=["POST"])
 def log_quiz_answer(id):
     if request.is_json:
         global user_quiz_answers
         data = request.get_json()
-        answer = data['answer']
+        answer = data["answer"]
         user_quiz_answers[id] = answer
         return jsonify({"status": "success", "message": ""}), 200
     else:
         return jsonify({"status": "error", "message": "Request was not JSON"}), 400
-
 
 
 if __name__ == "__main__":

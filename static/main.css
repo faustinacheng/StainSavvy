@@ -139,7 +139,7 @@ a:hover {
 .button {
     background: var(--base);
     border: none;
-    padding: 15px 30px;
+    padding: 15px 50px;
     border-radius: 10px;
     font-size: 18px;
     font-weight: bold;
