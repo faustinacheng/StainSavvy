@@ -1,8 +1,12 @@
 <div class="d-flex justify-content-center">
     <div>
         {% for option in quiz_item["items"] %}
+<<<<<<< HEAD
             <img id ="{{option}}" src="{{option}}" draggable="true" ondragstart="drag(event)" class="draggable-image">
             <!-- <div id ="{{option}}" draggable="true" ondragstart="drag(event)">{{option}}</div> -->
+=======
+            <div id ="{{option}}" draggable="true" ondragstart="drag(event)">{{option}}</div>
+>>>>>>> 0332217c6dddc809c200eb8f9371b12815d0d2af
         {% endfor %}
     </div>
     <div id="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)" style="width: 300px; height: 100px; border: 1px solid black;"></div>
