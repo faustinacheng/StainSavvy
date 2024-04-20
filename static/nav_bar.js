@@ -4,6 +4,9 @@ $(document).ready(function () {
         .then((data) => {
             $(".navbar-nav").empty();
             const currentPath = window.location.pathname;
+            if (currentPath === "/") {
+                $("#navbar-logo").addClass("active");
+            }
             $.each(data.learn, function (i, item) {
                 let activeClass =
                     currentPath === `/learn/${item.id}` ? "active" : "";

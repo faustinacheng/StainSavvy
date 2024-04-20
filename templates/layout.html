@@ -15,6 +15,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
 
     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
     <script src="{{url_for('static', filename='nav_bar.js')}}"></script>
@@ -24,25 +31,31 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="/">StainSavvy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid p-0">
+                <a id="navbar-logo" class="navbar-brand logo accent nav-item" href="/">
+                    <img id="purple-logo" src="{{url_for('static', filename='images/purple-splatter.png')}}" alt="">
+                    StainSavvy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                    </div>
                 </div>
             </div>
+        </nav>
+
+        <div class="container-fluid p-0">
+            <div class="main-wrapper">
+                {% block content %}
+                {% endblock %}
+            </div>
         </div>
-    </nav>
-
-    <div class="container">
-        {% block content %}
-        {% endblock %}
     </div>
-
 </body>
 
 </html>
