@@ -51,3 +51,10 @@
 .error-message{
     color: red;
 }
+
+.draggable-image{
+    width: 200px; /* You can adjust this width as needed */
+    height: 150px; /* Adjust the height as needed for your desired aspect ratio */
+    object-fit: cover;
+    border-radius: 10px; /* You can adjust the radius to increase or decrease the roundness */
+}

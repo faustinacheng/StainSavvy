@@ -62,38 +62,30 @@ $(document).ready(function(){
 // Drag and drop specific functions 
 $(document).ready(function() {
     if (quizData["question-type"] === "drag-items") {
-        // Get all draggable items
         var draggableItems = document.querySelectorAll('[draggable="true"]');
         draggableItems.forEach(function(item) {
-            item.addEventListener('dragstart', function(event) {
-                drag(event);
-            });
+            item.addEventListener('dragstart', drag);
         });
 
-        // Get the dropzone
         var dropzone = document.getElementById('dropzone');
         dropzone.addEventListener('dragover', allowDrop);
         dropzone.addEventListener('drop', drop);
     }
 });
 
-function allowDrop(event) {
-    event.preventDefault();
-}
-
 function drag(event) {
     event.dataTransfer.setData("text", event.target.id);
+}
+
+function allowDrop(event) {
+    event.preventDefault();
 }
 
 function drop(event) {
     event.preventDefault();
     var data = event.dataTransfer.getData("text");
-    var droppedElement = document.getElementById(data);
-    if (droppedElement) {
-        event.target.appendChild(droppedElement);
-    }
+    event.target.appendChild(document.getElementById(data));
 }
-
 
 //add checking to make sure they've selected a quiz answer
 //when click next (valid answer)

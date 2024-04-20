@@ -14,7 +14,7 @@
     </div>
     <div class="p-5 text-center">
         <h3>{{quiz_item["question"]}}</h2>
-        <img src='{{quiz_item["quiz-image"]}}' class='img-fluid' width='300' alt='Quiz Question {{quiz_item["id"]}} Image'>
+        <img id="thumbnail" src='{{quiz_item["quiz-image"]}}' class='img-fluid' width='300' alt='Quiz Question {{quiz_item["id"]}} Image'>
         {% if quiz_item["question-type"] == "multiple-choice" %}
             {% include "multiple_choice_quiz.html" %}
         {% elif quiz_item["question-type"] == "drag-items" %}
