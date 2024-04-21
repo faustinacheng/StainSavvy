@@ -61,8 +61,6 @@ def quiz_results():
     return render_template("quiz-results.html", num=num_quiz_items, correct=correct)
 
 
-
-
 # AJAX FUNCTIONS
 @app.route("/quiz/<int:id>/log_answer", methods=['POST'])
 def log_quiz_answer(id):
