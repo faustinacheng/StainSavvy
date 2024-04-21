@@ -10,24 +10,23 @@
 </script>
 
 <div id="item-info">
-    <div class="p-3">
-        <h1>{{learn_item["stain"]}} Stains</h1>
+    <div class="p-4">
+        <p class="h2">{{learn_item["stain"]}} Stains</p>
     </div>
-    <div class="row">
+    <div class="learn-block row">
         <div class="col-5 p-5">
-            <img src='{{learn_item["image"]}}' class='img-fluid' alt='{{learn_item["stain"]}} Stain Image'>
             <p>
                 {{learn_item["content"]["identify"]}}
             </p>
+            <img src='{{learn_item["image"]}}' class='img-fluid' width="300" alt='{{learn_item["stain"]}} Stain Image'>
         </div>
         <div class="col-7 p-5">
             <div id="removal-wrapper">
-                <h3>Removal:</h3>
-                
-                <ol>
-                    {% for step in learn_item["content"]["removal"].values() %}
+                <p class="removal">Removal:<p>
+                <ol class="removal-list">
+                    {% for index, step in learn_item["content"]["removal"].items() %}
                     <li>
-                        <div class="row p-2">
+                        <div class="row removal-step">
                             <div class="col-7">
                                 {{ step["step"] }}
                             </div>
@@ -37,19 +36,19 @@
                         </div>
                     </li>
                     {% endfor %}
-                </ol>
+                 </ol>
 
             </div>
-            <div>
-                {% if "extra" in learn_item["content"] %}
-                    <p><em>{{ learn_item["content"]["extra"] }}</em></p>
-                {% endif %}
-            </div>
+        </div>
+        <div class="extra-content-block">
+            {% if "extra" in learn_item["content"] %}
+                <p class="extra-content"><em>{{ learn_item["content"]["extra"] }}</em></p>
+            {% endif %}
         </div>
     </div>
     <div id="nav-buttons" class="p-3 d-flex justify-content-between">
-        <a href="#" id="back-button" role="button" class="btn btn-primary">&#8592;</a>
-        <a href="#" id="next-button" role="button" class="btn btn-primary">&#8594;</a>
+        <a href="#" id="back-button" role="button" class="button btn btn-primary">&#8592;</a>
+        <a href="#" id="next-button" role="button" class="button btn btn-primary">&#8594;</a>
     </div>
 </div>
 

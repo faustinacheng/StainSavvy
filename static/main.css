@@ -140,6 +140,70 @@ a:hover {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    color: var(--dark-grey);
+}
+
+
+/* LEARN PAGES */
+
+.learn-block {
+    margin-top: -55px;
+    height: 475px;
+    position: relative;
+}
+
+.removal {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.removal-step {
+    height: 80px;
+    margin-bottom: 5px;
+}
+
+.removal-step img {
+    max-height: 80px;
+    width: auto;
+}
+
+ol.removal-list li::marker {
+    color: var(--accent);
+}
+
+.removal-list{
+    list-style-type: decimal; 
+    padding-left: 20px;
+}
+
+.extra-content-block {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 380px;
+    z-index: 1;
+}
+
+.extra-content {
+    text-align: center;
+}
+
+
+#nav-buttons{
+    z-index: 2;
+}
+
+
+/* QUIZ WELCOME PAGE */
+
+.quiz-welcome-text{
+    margin-top: 80px;
+    font-size: 24px;
+}
+
+.quiz-button-div{
+    margin-bottom: 40px;
 }
 
 /* IMAGE SELECT QUIZ */
@@ -159,18 +223,6 @@ a:hover {
 .select-image {
     display: inline-flex;
     height: 130px;
-}
-
-#back-button {
-    position: fixed;
-    bottom: 80px;
-    left: 200px;
-}
-
-#next-button {
-    position: fixed;
-    bottom: 80px;
-    right: 200px;
 }
 
 .form-check {
@@ -197,5 +249,4 @@ a:hover {
 .clickable {
     cursor: pointer;
     text-decoration: underline;
-    /* color: #0066cc; */
 }
