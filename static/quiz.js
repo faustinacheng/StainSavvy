@@ -43,7 +43,7 @@ $(document).ready(function () {
     }
 });
 
-// Multiple-choice specific functions
+// Multiple-choice and select-item specific functions
 $(document).ready(function () {
     if (
         quizData["question-type"] == "multiple-choice" ||
@@ -63,6 +63,20 @@ $(document).ready(function () {
     }
 });
 
-//add checking to make sure they've selected a quiz answer
-//when click next (valid answer)
-//ajax call to backend to the user_quiz_answers dictionary
+
+// Order-steps specific functions
+$(document).ready(function () {
+    if (quizData["question-type"] == "order-steps") {
+        const sortableList = document.getElementById("sortable-steps");
+        new Sortable(sortableList, {
+            animation: 150,
+            handle: ".sortable-item",
+            onEnd: function (evt) {
+                const items = Array.from(sortableList.children);
+                items.forEach((item, index) => {
+                    item.dataset.step = index + 1;
+                });
+            },
+        });
+    }
+});

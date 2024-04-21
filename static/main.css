@@ -206,6 +206,51 @@ ol.removal-list li::marker {
     margin-bottom: 40px;
 }
 
+
+/* ORDER STEPS QUIZ */
+.sortable-list {
+    list-style-type: none;
+    padding-top: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sortable-item {
+    display: inline-block;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+
+    
+}
+
+.step-box {
+    width: 300px;
+    text-align: left;
+    border: 1px solid var(--dark-grey);
+    background-color: var(--light-grey);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.step-box span {
+    display: block;
+    text-align: left;
+}
+
+.step-number {
+    display: inline-block;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+
 /* IMAGE SELECT QUIZ */
 
 .image-option .form-check-input {

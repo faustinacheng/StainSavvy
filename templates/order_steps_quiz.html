@@ -1,3 +1,12 @@
 <div>
-    <h3>This is a non-multiple choice question, implementing later</h3>
+    <div id="sortable-steps" class="sortable-list">
+        {% for step in quiz_item["steps"] %}
+        <div class="sortable-item">
+            <div class="step-number">{{ loop.index }}.</div>
+            <div class="step-box">
+                {{ step }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
