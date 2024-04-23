@@ -61,8 +61,17 @@ def quiz_results():
         q_dict = data["quiz"][f"{id}"]
         if ans == q_dict["answer"]:
             correct += 1
-    user_quiz_answers.clear()
-    return render_template("quiz-results.html", num=num_quiz_items, correct=correct)
+
+    if correct >= 8:
+        results_message = "Congradulations! You are now a stain master!"
+    elif correct >= 6:
+        results_message = "Nice job! You are on your way to being a stain master."
+    elif correct >= 4:
+        results_message = "Good job learning some stains! Let's keep practicing."
+    else:
+        results_message = "Let's try again, there's some room to improve."
+
+    return render_template("quiz-results.html", num=num_quiz_items, correct=correct, results_message=results_message)
 
 
 # AJAX FUNCTIONS

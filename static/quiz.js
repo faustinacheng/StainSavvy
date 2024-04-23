@@ -72,11 +72,33 @@ $(document).ready(function () {
             animation: 150,
             handle: ".sortable-item",
             onEnd: function (evt) {
-                const items = Array.from(sortableList.children);
-                items.forEach((item, index) => {
-                    item.dataset.step = index + 1;
+                const stepNumbers = sortableList.querySelectorAll('.row > div:first-child');
+                stepNumbers.forEach((stepNumber, index) => {
+                    stepNumber.textContent = index + 1 + '.';
                 });
             },
         });
+
+        //function to restore the order from saved answers
+        function restoreOrder(savedOrder) {
+            const stepBoxes = document.querySelectorAll('.step-box');
+            stepBoxes.forEach((stepBox, index) => {
+                stepBox.textContent = savedOrder[index];
+            });
+        }
+        if (userQuizAnswers.hasOwnProperty(quizData.id)) {
+            restoreOrder(userQuizAnswers[quizData.id]);
+        }
+
+        $("#next-button").click(function (event) {
+            var stepOrder = [];
+            const stepBoxes = document.querySelectorAll('.step-box');
+            stepBoxes.forEach(stepBox => {
+                stepOrder.push(stepBox.textContent.trim());
+            });
+            console.log(stepOrder);
+            log_answer(stepOrder);
+        });
+        
     }
 });

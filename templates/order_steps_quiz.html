@@ -1,10 +1,12 @@
 <div>
     <div id="sortable-steps" class="sortable-list">
         {% for step in quiz_item["steps"] %}
-        <div class="sortable-item">
+        <div class="row">
             <div class="step-number">{{ loop.index }}.</div>
-            <div class="step-box">
-                {{ step }}
+            <div class="sortable-item">
+                <div class="step-box">
+                    {{ step }}
+                </div>
             </div>
         </div>
         {% endfor %}

@@ -8,9 +8,12 @@
     </div>
     <div class="p-5 text-center">
         You got: <p class="font-weight-bold">{{correct}}/{{num}} correct</p>
-        <BR><BR>
-        Great job!<BR>
-        You are now a stain master!
+        <BR>
+            {% if results_message %}
+            {{ results_message }}
+            {% else %}
+            Congratulations!
+            {% endif %}
 
     </div>
     <div class="p-3 quiz-result-buttons d-flex">

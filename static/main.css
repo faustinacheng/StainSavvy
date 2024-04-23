@@ -224,9 +224,14 @@ ol.removal-list li::marker {
     align-items: center;
     position: relative;
     padding-left: 30px;
-
-    
 }
+
+.step-number {
+    display: inline-block;
+    font-weight: bold;
+    position: absolute;
+}
+
 
 .step-box {
     width: 300px;
@@ -241,13 +246,6 @@ ol.removal-list li::marker {
 .step-box span {
     display: block;
     text-align: left;
-}
-
-.step-number {
-    display: inline-block;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
 }
 
 
