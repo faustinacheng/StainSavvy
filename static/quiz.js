@@ -87,7 +87,6 @@ $(document).ready(function() {
 
         $('#next-button').click(function(event) {
             if (droppedItems.length == 3){
-                console.log("Logging the items")
                 log_answer(droppedItems);
             } else{
                 event.preventDefault();

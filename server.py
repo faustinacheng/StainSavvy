@@ -74,7 +74,5 @@ def log_quiz_answer(id):
         print("Error")
         return jsonify({"status": "error", "message": "Request was not JSON"}), 400
 
-
-
 if __name__ == "__main__":
     app.run(debug=True)
