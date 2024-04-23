@@ -59,7 +59,11 @@ def quiz_results():
     correct = 0
     for id, ans in user_quiz_answers.items():
         q_dict = data["quiz"][f"{id}"]
-        if ans == q_dict["answer"]:
+        if isinstance(ans, list) and isinstance(q_dict["answer"], list):
+            if sorted(ans) == sorted(q_dict["answer"]):
+                correct += 1
+        
+        elif ans == q_dict["answer"]:
             correct += 1
 
     if correct >= 8:
