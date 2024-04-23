@@ -21,7 +21,6 @@ function log_answer(answer){
 //save previously entered answers
 $(document).ready(function() {
     if (userQuizAnswers.hasOwnProperty(quizData.id)) {
-        console.log("YESS")
         $('input[name="quiz_option"][value="' + userQuizAnswers[quizData.id] + '"]').prop('checked', true);
     }
 });
@@ -41,40 +40,65 @@ $(document).ready(function () {
 });
 
 // Multiple-choice specific functions
-$(document).ready(function(){
-    if(quizData["question-type"] == "multiple-choice"){
-        $('#next-button').click(function(event){
-            if(!$('input[name="quiz_option"]:checked').val()){
+$(document).ready(function() {
+    if (quizData["question-type"] === "multiple-choice") {
+        $('#next-button').click(function(event) {
+            if (!$('input[name="quiz_option"]:checked').val()) {
                 event.preventDefault();
-                var errorMessage = document.querySelector('.error-message');
-                errorMessage.textContent = 'Please select at least one answer!'
-            }else{
-                var answer = $('input[name="quiz_option"]:checked').val()
-                var q_no = quizData.id
-                log_answer(answer)
+                $('.error-message').text('Please select at least one answer!');
+            } else {
+                var answer = $('input[name="quiz_option"]:checked').val();
+                var q_no = quizData.id;
+                log_answer(answer);
             }
         });
     }
-
 });
 
-
-// Drag and drop specific functions 
+// Drag and drop specific functions
 $(document).ready(function() {
+    var droppedItems = []; // Array to store IDs of dropped items
+
     if (quizData["question-type"] === "drag-items") {
-        // Get all draggable items
-        var draggableItems = document.querySelectorAll('[draggable="true"]');
-        draggableItems.forEach(function(item) {
-            item.addEventListener('dragstart', function(event) {
-                drag(event);
+        var draggableItems = $('[draggable="true"]');
+        draggableItems.each(function() {
+            $(this).on('dragstart', function(event) {
+                drag(event.originalEvent);
             });
         });
 
-        // Get the dropzone
-        var dropzone = document.getElementById('dropzone');
-        dropzone.addEventListener('dragover', allowDrop);
-        dropzone.addEventListener('drop', drop);
+        $('img').on('dragover', function(event) {
+            event.preventDefault(); // Necessary to allow dropping
+            event.originalEvent.dataTransfer.dropEffect = 'move';
+        }).on('drop', function(event) {
+            event.preventDefault();
+            var data = event.originalEvent.dataTransfer.getData("text");
+
+            if (droppedItems.length < 3) {
+                var draggedElement = document.getElementById(data);
+                if (!droppedItems.includes(data)) {
+                    $(this).parent().append(draggedElement);
+                    droppedItems.push(data.id);
+                    $(draggedElement).remove();
+                    updateCurrentAnswers();  // Update the list of current answers
+                }
+            } else {
+                $('.error-message').text('You cannot drop more than 3 items.');
+            }
+        });
+
+        $('#resetButton').click(function() {
+            window.location.reload();
+            // Additional reset functionality
+            // droppedItems = [];
+            // $('.error-message').text('');
+            // updateCurrentAnswers();
+        });
+    }
 });
+
+
+
 
 function drag(event) {
     event.dataTransfer.setData("text", event.target.id);

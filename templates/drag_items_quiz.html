@@ -1,14 +1,14 @@
 <div class="d-flex justify-content-center">
-    <div>
-        {% for option in quiz_item["items"] %}
-<<<<<<< HEAD
-            <img id ="{{option}}" src="{{option}}" draggable="true" ondragstart="drag(event)" class="draggable-image">
-            <!-- <div id ="{{option}}" draggable="true" ondragstart="drag(event)">{{option}}</div> -->
-=======
-            <div id ="{{option}}" draggable="true" ondragstart="drag(event)">{{option}}</div>
->>>>>>> 0332217c6dddc809c200eb8f9371b12815d0d2af
+    <div class="image-container">
+        {% for item in quiz_item["items"] %}
+            {% for url, description in item.items() %}
+                <div class="tile" id="{{url}}">  <!-- Encapsulating each image and description in a div -->
+                    <img id="{{url}}" src="{{ url }}" draggable="true" ondragstart="drag(event)" class="draggable-image" alt="{{ description }}">
+                    <div class="image-description">{{description}}</div>
+                </div>
+            {% endfor %}
         {% endfor %}
     </div>
-    <div id="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)" style="width: 300px; height: 100px; border: 1px solid black;"></div>
 </div>
+<button id="resetButton" class="btn btn-primary">Reset</button>
 <p class="error-message"></p>
