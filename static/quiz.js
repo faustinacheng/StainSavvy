@@ -73,32 +73,33 @@ $(document).ready(function() {
         }).on('drop', function(event) {
             event.preventDefault();
             var data = event.originalEvent.dataTransfer.getData("text");
-
             if (droppedItems.length < 3) {
                 var draggedElement = document.getElementById(data);
                 if (!droppedItems.includes(data)) {
                     $(this).parent().append(draggedElement);
-                    droppedItems.push(data.id);
+                    droppedItems.push(draggedElement.id)
                     $(draggedElement).remove();
-                    updateCurrentAnswers();  // Update the list of current answers
                 }
             } else {
                 $('.error-message').text('You cannot drop more than 3 items.');
             }
         });
 
+        $('#next-button').click(function(event) {
+            if (droppedItems.length == 3){
+                console.log("Logging the items")
+                log_answer(droppedItems);
+            } else{
+                event.preventDefault();
+                $('.error-message').text('Please choose three answers');
+            }
+        });
+
         $('#resetButton').click(function() {
             window.location.reload();
-            // Additional reset functionality
-            // droppedItems = [];
-            // $('.error-message').text('');
-            // updateCurrentAnswers();
         });
     }
 });
-
-
-
 
 function drag(event) {
     event.dataTransfer.setData("text", event.target.id);

@@ -14,7 +14,6 @@ num_quiz_items = len(data["quiz"])
 visited_times = {}
 user_quiz_answers = {}
 
-
 # ROUTES
 @app.route("/")
 def welcome():
@@ -55,8 +54,9 @@ def quiz_results():
     correct = 0 
     for id, ans in user_quiz_answers.items():
         q_dict = data["quiz"][f"{id}"]
-        if ans == q_dict["answer"]:
+        if ans == q_dict["answer"].sorted():
             correct += 1
+            continue
     user_quiz_answers.clear()
     return render_template("quiz-results.html", num=num_quiz_items, correct=correct)
 
@@ -68,9 +68,10 @@ def log_quiz_answer(id):
         global user_quiz_answers
         data = request.get_json()
         answer = data['answer']
-        user_quiz_answers[id] = answer
+        user_quiz_answers[id] = answer.sort()
         return jsonify({"status": "success", "message": ""}), 200
     else:
+        print("Error")
         return jsonify({"status": "error", "message": "Request was not JSON"}), 400
 
 
