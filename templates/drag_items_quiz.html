@@ -1,3 +1,14 @@
-<div>
-    <h3>This is a non-multiple choice question, implementing later</h3>
+<div class="d-flex justify-content-center">
+    <div class="image-container">
+        {% for item in quiz_item["items"] %}
+            {% for url, description in item.items() %}
+                <div class="tile" id="{{url}}">  <!-- Encapsulating each image and description in a div -->
+                    <img id="{{url}}" src="{{ url }}" draggable="true" ondragstart="drag(event)" class="draggable-image" alt="{{ description }}">
+                    <div class="image-description">{{description}}</div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
 </div>
+<button id="resetButton" class="btn btn-primary">Reset</button>
+<p class="error-message"></p>

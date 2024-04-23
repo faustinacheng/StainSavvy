@@ -102,3 +102,67 @@ $(document).ready(function () {
         
     }
 });
+
+$(document).ready(function() {
+    var droppedItems = []; // Array to store IDs of dropped items
+
+    if (quizData["question-type"] === "drag-items") {
+        var draggableItems = $('[draggable="true"]');
+        draggableItems.each(function() {
+            $(this).on('dragstart', function(event) {
+                drag(event.originalEvent);
+            });
+        });
+
+        $('img').on('dragover', function(event) {
+            event.preventDefault(); // Necessary to allow dropping
+            event.originalEvent.dataTransfer.dropEffect = 'move';
+        }).on('drop', function(event) {
+            event.preventDefault();
+            var data = event.originalEvent.dataTransfer.getData("text");
+            if (droppedItems.length < 3) {
+                var draggedElement = document.getElementById(data);
+                if (!droppedItems.includes(data)) {
+                    $(this).parent().append(draggedElement);
+                    droppedItems.push(draggedElement.id)
+                    $(draggedElement).remove();
+                }
+            } else {
+                $('.error-message').text('You cannot drop more than 3 items.');
+            }
+        });
+
+        $('#next-button').click(function(event) {
+            if (droppedItems.length == 3){
+                log_answer(droppedItems.sort());
+            } else{
+                event.preventDefault();
+                $('.error-message').text('Please choose three answers');
+            }
+        });
+
+        $('#resetButton').click(function() {
+            window.location.reload();
+        });
+    }
+});
+
+function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
+}
+
+function allowDrop(event) {
+    event.preventDefault();
+}
+
+function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text");
+    var droppedElement = document.getElementById(data);
+    if (droppedElement) {
+        var dropZone = event.target.closest('.drop-zone'); // assuming you have a class .drop-zone for droppable areas
+        if (dropZone) {
+            dropZone.appendChild(droppedElement);
+        }
+    }
+}

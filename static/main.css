@@ -293,3 +293,41 @@ ol.removal-list li::marker {
     cursor: pointer;
     text-decoration: underline;
 }
+
+.image-container {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;  /* Space between tiles */
+    justify-content: center;
+}
+
+.tile {
+    width: 100px;  /* Width of each tile */
+    cursor: pointer;  /* Indicates interactivity */
+    text-align: center;  /* Centers the text and image within the tile */
+    border-radius: 5px;  /* Rounded corners for aesthetics */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);  /* Shadow for 3D effect */
+    background-color: #fff;  /* Background color */
+    transition: transform 0.2s;  /* Smooth transformation on hover */
+}
+
+.tile:hover {
+    transform: scale(1.05);  /* Slightly enlarge tiles on hover */
+}
+
+.tile img {
+    width: 100%;  /* Make the image fill the width of the tile */
+    height: 100px;  /* Fixed height for images */
+    border-top-left-radius: 5px;  /* Rounded top corners */
+    border-top-right-radius: 5px;  /* Rounded top corners */
+    object-fit: cover;  /* Ensures images cover the area well */
+}
+
+.image-description {
+    overflow: hidden;  /* Prevents text overflow */
+    text-overflow: ellipsis;  /* Adds ellipsis to truncated text */
+    white-space: nowrap;  /* Keeps text in a single line */
+    font-size: 0.8rem;  /* Font size for descriptions */
+    padding: 5px;  /* Padding around text */
+}
