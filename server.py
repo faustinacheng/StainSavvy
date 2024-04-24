@@ -69,7 +69,7 @@ def quiz_results():
     if correct >= 8:
         results_message = "Congradulations! You are now a stain master!"
     elif correct >= 6:
-        results_message = "Nice job! You are on your way to being a stain master."
+        results_message = "Nice job! You are on your way to becoming a stain master."
     elif correct >= 4:
         results_message = "Good job learning some stains! Let's keep practicing."
     else:
