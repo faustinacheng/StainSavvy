@@ -9,13 +9,18 @@
 <script src="{{ url_for('static', filename='quiz.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 
-<div>
-    <div class="p-3">
-        <h3>Question {{quiz_item["id"]}} of {{num}}</h3>
+<div class="">
+    <div class="h2 p-4">
+        Question {{quiz_item["id"]}} of {{num}}
     </div>
-    <div class="p-5 text-center">
-        <h3>{{quiz_item["question"]}}</h2>
-        <img src='{{quiz_item["quiz-image"]}}' class='img-fluid' width='300' alt='Quiz Question {{quiz_item["id"]}} Image'>
+    <div class="p-5 quiz-block">
+        <div class="question-text">
+            <p>{{quiz_item["question"]}}</p>
+        </div>
+        <div class="quiz-image-block">
+            <img src='{{quiz_item["quiz-image"]}}' class='quiz-image img-fluid' alt='Quiz Question {{quiz_item["id"]}} Image'>
+        </div>
+
         {% if quiz_item["question-type"] == "multiple-choice" %}
             {% include "multiple_choice_quiz.html" %}
         {% elif quiz_item["question-type"] == "drag-items" %}
@@ -27,8 +32,8 @@
         {% endif %}
     </div>
     <div class="p-3 d-flex justify-content-between">
-        <a href="#" id="back-button" role="button" class="btn btn-primary">&#8592;</a>
-        <a href="#" id="next-button" role="button" class="btn btn-primary">&#8594;</a>
+        <a href="#" id="back-button" role="button" class="button">&#8592;</a>
+        <a href="#" id="next-button" role="button" class="button">&#8594;</a>
     </div>
 </div>
 

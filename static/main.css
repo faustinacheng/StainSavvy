@@ -141,6 +141,7 @@ a:hover {
     font-weight: bold;
     cursor: pointer;
     color: var(--dark-grey);
+    z-index: 1;
 }
 
 
@@ -179,7 +180,7 @@ ol.removal-list li::marker {
 .extra-content-block {
     position: absolute;
     bottom: -60px;
-    left: 50%;
+    left: 60%;
     transform: translate(-50%, -50%);
     max-width: 380px;
     z-index: 1;
@@ -197,15 +198,41 @@ ol.removal-list li::marker {
 
 /* QUIZ WELCOME PAGE */
 
+.quiz-welcome-block{
+    height: 500px;
+}
+
 .quiz-welcome-text{
     margin-top: 80px;
     font-size: 24px;
 }
 
 .quiz-button-div{
+    padding-bottom: 10px;
     margin-bottom: 40px;
 }
 
+/* QUIZ */
+
+.quiz-block {
+    margin-top: -60px;
+    height: 475px;
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+
+.question-text {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.quiz-image {
+    max-width: 325px;
+    max-height: 250px;
+    margin-top: -5px;
+}
 
 /* ORDER STEPS QUIZ */
 .sortable-list {
@@ -270,7 +297,11 @@ ol.removal-list li::marker {
 
 .form-check {
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.quiz-answer-choices-block  {
+    margin-top: 15px;
 }
 
 #retake-button{
@@ -303,7 +334,8 @@ ol.removal-list li::marker {
 }
 
 .tile {
-    width: 100px;  /* Width of each tile */
+    width: 90px;  /* Width of each tile */
+    height: 90px;
     cursor: pointer;  /* Indicates interactivity */
     text-align: center;  /* Centers the text and image within the tile */
     border-radius: 5px;  /* Rounded corners for aesthetics */
@@ -318,7 +350,7 @@ ol.removal-list li::marker {
 
 .tile img {
     width: 100%;  /* Make the image fill the width of the tile */
-    height: 100px;  /* Fixed height for images */
+    height: 60px;  /* Fixed height for images */
     border-top-left-radius: 5px;  /* Rounded top corners */
     border-top-right-radius: 5px;  /* Rounded top corners */
     object-fit: cover;  /* Ensures images cover the area well */
@@ -330,4 +362,13 @@ ol.removal-list li::marker {
     white-space: nowrap;  /* Keeps text in a single line */
     font-size: 0.8rem;  /* Font size for descriptions */
     padding: 5px;  /* Padding around text */
+}
+
+.dropped-tile {
+    position: absolute;
+    cursor: default; /* Prevent cursor change on hover */
+}
+
+.quiz-image-block {
+    position: relative; /* Ensure the dropped tiles are positioned relative to this container */
 }
