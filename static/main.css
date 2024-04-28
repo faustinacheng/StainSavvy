@@ -332,36 +332,48 @@ ol.removal-list li::marker {
     gap: 10px;  /* Space between tiles */
     justify-content: center;
 }
+.image-container {
+    padding: 60px;  /* Increased padding */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;  /* Increased space between tiles */
+    justify-content: center;
+}
 
 .tile {
     width: 90px;  /* Width of each tile */
-    height: 90px;
+    height: auto;  /* Height adjusts to content */
     cursor: pointer;  /* Indicates interactivity */
     text-align: center;  /* Centers the text and image within the tile */
     border-radius: 5px;  /* Rounded corners for aesthetics */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);  /* Shadow for 3D effect */
     background-color: #fff;  /* Background color */
-    transition: transform 0.2s;  /* Smooth transformation on hover */
-}
-
-.tile:hover {
-    transform: scale(1.05);  /* Slightly enlarge tiles on hover */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .tile img {
     width: 100%;  /* Make the image fill the width of the tile */
-    height: 60px;  /* Fixed height for images */
+    height: auto;  /* Height adjusts to maintain aspect ratio */
+    max-height: 120px;  /* Maximum height set for images */
     border-top-left-radius: 5px;  /* Rounded top corners */
     border-top-right-radius: 5px;  /* Rounded top corners */
     object-fit: cover;  /* Ensures images cover the area well */
 }
 
 .image-description {
-    overflow: hidden;  /* Prevents text overflow */
-    text-overflow: ellipsis;  /* Adds ellipsis to truncated text */
-    white-space: nowrap;  /* Keeps text in a single line */
-    font-size: 0.8rem;  /* Font size for descriptions */
-    padding: 5px;  /* Padding around text */
+    overflow: visible;  /* Allows content to expand */
+    text-overflow: clip;  /* Removes ellipsis */
+    white-space: normal;  /* Allows text wrapping */
+    font-size: 0.8rem;
+    padding: 5px;
+    height: auto;  /* Allows height to expand as needed */
+    line-height: 1.2;  /* Adjust line spacing for better readability */
+}
+
+.tile:hover {
+    transform: scale(1.05);  /* Slightly enlarge tiles on hover */
 }
 
 .dropped-tile {
