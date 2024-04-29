@@ -104,42 +104,39 @@ $(document).ready(function () {
 });
 
 $(document).ready(function() {
-    var droppedItems = []; // Array to store IDs of dropped items
+    var droppedItems = [];
+    if (quizData["question-type"] == "drag-items") {
 
-    if (quizData["question-type"] === "drag-items") {
-        var draggableItems = $('.draggable-image'); // Select draggable images
-        draggableItems.each(function() {
-            $(this).on('dragstart', function(event) {
-                drag(event.originalEvent);
-            });
+        // Handle drag over the entire block, not just specific elements
+        $('.quiz-image-block').on('dragover', function(event) {
+            event.preventDefault();
+            event.originalEvent.dataTransfer.dropEffect = 'move';
         });
 
-        $('.quiz-image-block').on('dragover', function(event) {
-            event.preventDefault(); // Necessary to allow dropping
-            event.originalEvent.dataTransfer.dropEffect = 'move';
-        }).on('drop', function(event) {
+        // Handle drop events on the quiz image block
+        $('.quiz-image-block').on('drop', function(event) {
             event.preventDefault();
             var data = event.originalEvent.dataTransfer.getData("text");
-            if (droppedItems.length < 3) {
-                var draggedElement = document.getElementById(data);
-                if (!droppedItems.includes(data)) {
-                    // Clone the dragged element and add a class to differentiate it
-                    var clonedElement = $(draggedElement).clone().addClass('dropped-tile');
-                    // Calculate the position relative to the quiz-image-block container
-                    var posX = event.originalEvent.layerX - (clonedElement.width() / 2);
-                    var posY = event.originalEvent.layerY - (clonedElement.height() / 2);
-                    // Set the position of the cloned element
-                    clonedElement.css({position: 'absolute', left: posX, top: posY});
-                    // Append cloned element to the target drop zone
-                    $('.quiz-image-block').append(clonedElement);
-                    // Remove the original dragged element from draggableItems
-                    draggableItems = draggableItems.not(draggedElement);
-                    droppedItems.push(data);
-                    $(draggedElement).remove();
-                }
-            } else {
+            var draggedElement = document.getElementById(data);
+
+            if (droppedItems.length < 3 && !droppedItems.includes(data) && data != "") {
+                // Calculate the position relative to the quiz-image-block container
+                var posX = event.originalEvent.layerX - $(draggedElement).outerWidth() / 2;
+                var posY = event.originalEvent.layerY - $(draggedElement).outerHeight() / 2;
+
+                // Append the dragged element to the drop zone directly
+                $(this).append(draggedElement);
+                $(draggedElement).css({position: 'absolute', left: posX, top: posY}).addClass('dropped-tile');
+                droppedItems.push(data);
+            } else if (droppedItems.length > 3){
                 $('.error-message').text('You cannot drop more than 3 items.');
+                console.log(droppedItems)
             }
+        });
+
+        // Reset functionality
+        $('#resetButton').click(function() {
+            window.location.reload();
         });
 
         $('#next-button').click(function(event) {
@@ -150,17 +147,15 @@ $(document).ready(function() {
                 $('.error-message').text('Please select three answers!');
             }
         });
-
-        $('#resetButton').click(function() {
-            window.location.reload();
-        });
     }
+    
 });
 
 
 function drag(event) {
-    event.dataTransfer.setData("text", event.target.id);
+    event.dataTransfer.setData("text", event.currentTarget.id);  // Use currentTarget instead of target
 }
+
 
 function allowDrop(event) {
     event.preventDefault();

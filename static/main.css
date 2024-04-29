@@ -216,7 +216,7 @@ ol.removal-list li::marker {
 
 .quiz-block {
     margin-top: -60px;
-    height: 475px;
+    height: 485px;
     position: relative;
     justify-content: center;
     align-items: center; 
@@ -325,19 +325,15 @@ ol.removal-list li::marker {
     text-decoration: underline;
 }
 
+
 .image-container {
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;  /* Space between tiles */
-    justify-content: center;
-}
-.image-container {
-    padding: 60px;  /* Increased padding */
+    padding-top: 15px;  /* Increased padding */
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;  /* Increased space between tiles */
     justify-content: center;
+    margin-bottom: 0px;
 }
 
 .tile {
@@ -351,6 +347,7 @@ ol.removal-list li::marker {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 0px;
 }
 
 .tile img {

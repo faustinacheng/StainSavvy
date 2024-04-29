@@ -2,8 +2,9 @@
     <div class="image-container">
         {% for item in quiz_item["items"] %}
             {% for url, description in item.items() %}
-                <div class="tile" id="{{url}}">  <!-- Encapsulating each image and description in a div -->
-                    <img id="{{url}}" src="{{ url }}" draggable="true" ondragstart="drag(event)" class="draggable-image" alt="{{ description }}">
+                <!-- Set the entire tile as draggable -->
+                <div class="tile" id="{{url}}" draggable="true" ondragstart="drag(event)">
+                    <img src="{{ url }}" class="draggable-image" alt="{{ description }}">
                     <div class="image-description">{{description}}</div>
                 </div>
             {% endfor %}

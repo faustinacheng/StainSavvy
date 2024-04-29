@@ -50,7 +50,6 @@ def quiz_item(id):
         user_quiz_answers=user_quiz_answers,
     )
 
-
 @app.route("/quiz/results")
 def quiz_results():
     global user_quiz_answers
