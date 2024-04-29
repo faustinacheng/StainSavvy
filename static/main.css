@@ -325,6 +325,9 @@ ol.removal-list li::marker {
     text-decoration: underline;
 }
 
+.highlighted {
+    outline: 2px solid var(--accent);  /* Using the --accent variable for the outline color */
+}
 
 .image-container {
     padding-top: 15px;  /* Increased padding */

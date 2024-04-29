@@ -159,8 +159,10 @@
         "question-type": "drag-items",
         "quiz-image": "https://cdn.shopify.com/s/files/1/1180/2404/files/AdobeStock_398802659_480x480.jpg?v=1646676346",
         "question": "Drag the proper 3 cleaning steps onto the grass stain.",
-        "items": [{"https://i.ibb.co/XYT5wkP/rinse-cold-water.png": "Rinse with cold water"},{"https://i.ibb.co/phRQNvX/giphy.gif": "Scrub"},{"https://i.ibb.co/M2ptrdW/blot-rubbing-alcohol.png": "Rubbing alcohol"},{"https://i.ibb.co/StDRW8t/vinegar-and-water.png": "Vinegar and water"},{"https://i.ibb.co/M7bk9sg/sit-20.png": "Let sit for 20 mins"}],
-        "answer": ["https://i.ibb.co/phRQNvX/giphy.gif", "https://i.ibb.co/StDRW8t/vinegar-and-water.png", "https://i.ibb.co/XYT5wkP/rinse-cold-water.png"]
+        "items": [["https://i.ibb.co/XYT5wkP/rinse-cold-water.png", "Rinse with cold water", 1],["https://i.ibb.co/phRQNvX/giphy.gif", "Scrub", 2],
+            ["https://i.ibb.co/M2ptrdW/blot-rubbing-alcohol.png", "Rubbing alcohol", 3],["https://i.ibb.co/StDRW8t/vinegar-and-water.png", "Vinegar and water", 4],
+            ["https://i.ibb.co/M7bk9sg/sit-20.png", "Let sit for 20 mins", 5]],
+        "answer": ["1", "2", "4"]
     },
     "3": { 
         "id": 3,
@@ -215,8 +217,15 @@
         "question-type": "drag-items",
         "quiz-image": "https://www.maid2match.com.au/wp-content/uploads/2023/03/How-To-Get-A-Coffee-Stain-Out-Of-Clothes.jpg",
         "question": "Drag the proper 3 cleaning items onto the coffee stain.",
-        "items": [{"https://i.postimg.cc/SN3dhVWB/rubbingalcohol.png": "Rubbing alcohol"},{"https://i.postimg.cc/jjQ4ybGT/dishsoap.png": "Dish soap"},{"https://i.postimg.cc/xdSPkCpg/bakingsoda.png": "Baking soda"},{"https://i.postimg.cc/gknsQ16y/water.png": "Water"},{"https://i.postimg.cc/8kywyTsP/vinegar.png": "Vinegar"},{"https://i.postimg.cc/JzXq4JxG/peroxide.png": "Peroxide"}],
-        "answer": ["https://i.postimg.cc/jjQ4ybGT/dishsoap.png", "https://i.postimg.cc/gknsQ16y/water.png", "https://i.postimg.cc/8kywyTsP/vinegar.png"]
+        "items": [
+            ["https://i.postimg.cc/SN3dhVWB/rubbingalcohol.png", "Rubbing alcohol", 1],
+            ["https://i.postimg.cc/jjQ4ybGT/dishsoap.png", "Dish soap", 2],
+            ["https://i.postimg.cc/xdSPkCpg/bakingsoda.png", "Baking soda", 3],
+            ["https://i.postimg.cc/gknsQ16y/water.png", "Water", 4],
+            ["https://i.postimg.cc/8kywyTsP/vinegar.png", "Vinegar", 5],
+            ["https://i.postimg.cc/JzXq4JxG/peroxide.png", "Peroxide", 6]
+        ],
+        "answer": ["2", "4", "5"]
     },
     "10": { 
         "id": 10,

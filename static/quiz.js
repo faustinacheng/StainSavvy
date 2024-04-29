@@ -21,7 +21,6 @@ function log_answer(answer) {
 //save previously entered answers
 $(document).ready(function () {
     if (userQuizAnswers.hasOwnProperty(quizData.id)) {
-        console.log("YESS");
         $(
             'input[name="quiz_option"][value="' +
                 userQuizAnswers[quizData.id] +
@@ -104,9 +103,33 @@ $(document).ready(function () {
 });
 
 $(document).ready(function() {
-    var droppedItems = [];
+    
+    if (userQuizAnswers.hasOwnProperty(quizData.id)) {
+        var droppedItems = userQuizAnswers[quizData.id];
+    } else {
+        var droppedItems = [];
+    }    
+    
     if (quizData["question-type"] == "drag-items") {
+        
+        // this means that we have items pre-saved
+        if (droppedItems.length > 0) {
+            restoreAnswers(droppedItems);
+        }
 
+        function resetAnswers(answers){
+            for (const id of answers){
+                var element = document.getElementById(id);
+                $(element).removeClass('highlighted');
+            }
+        }
+
+        function restoreAnswers(answers){
+            for (const id of answers){
+                var element = document.getElementById(id);
+                $(element).addClass('highlighted');
+            }
+        }
         // Handle drag over the entire block, not just specific elements
         $('.quiz-image-block').on('dragover', function(event) {
             event.preventDefault();
@@ -127,8 +150,10 @@ $(document).ready(function() {
                 // Append the dragged element to the drop zone directly
                 $(this).append(draggedElement);
                 $(draggedElement).css({position: 'absolute', left: posX, top: posY}).addClass('dropped-tile');
+                // We are pushing a three item-array 
                 droppedItems.push(data);
-            } else if (droppedItems.length > 3){
+                console.log(data)
+            } else if (droppedItems.length >= 3){
                 $('.error-message').text('You cannot drop more than 3 items.');
                 console.log(droppedItems)
             }
@@ -136,11 +161,17 @@ $(document).ready(function() {
 
         // Reset functionality
         $('#resetButton').click(function() {
+            if (droppedItems.length > 0 ){
+                resetAnswers(droppedItems)
+                log_answer([])
+            }
             window.location.reload();
         });
+        
 
         $('#next-button').click(function(event) {
             if (droppedItems.length == 3){
+                console.log(droppedItems.sort())
                 log_answer(droppedItems.sort());
             } else{
                 event.preventDefault();

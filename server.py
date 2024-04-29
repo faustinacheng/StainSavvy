@@ -14,7 +14,6 @@ num_quiz_items = len(data["quiz"])
 visited_times = {}
 user_quiz_answers = {}
 
-
 # ROUTES
 @app.route("/")
 def welcome():
@@ -42,7 +41,6 @@ def quiz_item(id):
     print(f"viewing quiz page {format(id)}")
     visited_times["quiz" + str(id)] = datetime.now()
     quiz_item = data["quiz"].get(id)
-    print(user_quiz_answers)
     return render_template(
         "quiz.html",
         quiz_item=quiz_item,
@@ -57,6 +55,7 @@ def quiz_results():
     # iterate through user_quiz_answers and calculate user's score
     correct = 0
     for id, ans in user_quiz_answers.items():
+        # For the drag and drop bull
         q_dict = data["quiz"][f"{id}"]
         if isinstance(ans, list) and isinstance(q_dict["answer"], list):
             if sorted(ans) == sorted(q_dict["answer"]):
@@ -84,6 +83,7 @@ def log_quiz_answer(id):
         global user_quiz_answers
         data = request.get_json()
         answer = data["answer"]
+        print(answer)
         user_quiz_answers[id] = answer
         return jsonify({"status": "success", "message": ""}), 200
     else:

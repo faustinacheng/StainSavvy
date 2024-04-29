@@ -1,13 +1,11 @@
 <div class="d-flex justify-content-center">
     <div class="image-container">
         {% for item in quiz_item["items"] %}
-            {% for url, description in item.items() %}
-                <!-- Set the entire tile as draggable -->
-                <div class="tile" id="{{url}}" draggable="true" ondragstart="drag(event)">
-                    <img src="{{ url }}" class="draggable-image" alt="{{ description }}">
-                    <div class="image-description">{{description}}</div>
-                </div>
-            {% endfor %}
+            <!-- Directly access elements of each item by index -->
+            <div class="tile" id="{{item[2]}}" draggable="true" ondragstart="drag(event)">
+                <img src="{{ item[0] }}" class="draggable-image" alt="{{ item[1] }}">
+                <div class="image-description">{{item[1]}}</div>
+            </div>
         {% endfor %}
     </div>
 </div>
